@@ -1,0 +1,154 @@
+{
+  "sources": [
+    {
+      "title": "小说虎",
+      "subtitle": "https://m.xshbook.com",
+      "comment": "by天天的鸟蛋蛋\n阅读云（sososhu）搜索系列+1",
+      "path": "1748262337.json"
+    },
+    {
+      "title": "漫画鱼",
+      "subtitle": "https://www.manhuayu8.com",
+      "comment": "by天天的鸟蛋蛋\n同模板：https://www.haoduoman.com\nwebView解密 ",
+      "path": "1748262347.json"
+    },
+    {
+      "title": "二三中文",
+      "subtitle": "http://wap.ersanxs.info",
+      "comment": "by天天的鸟蛋蛋\nby关耳 替换规则正则表达式",
+      "path": "1748262326.json"
+    },
+    {
+      "title": "风车漫画",
+      "subtitle": "https://www.fengchemh.com",
+      "comment": "2025/5/4\nby天天的鸟蛋蛋  \nby 静白 正文解密",
+      "path": "1748262362.json"
+    },
+    {
+      "title": "G社漫画/包子漫画",
+      "subtitle": "https://manhuafree.com",
+      "comment": "by天天的鸟蛋蛋 2025/04/20\n使用明月大佬的多线路选择器\n新包子漫画\n",
+      "path": "1748262377.json"
+    },
+    {
+      "title": "新键盘小说网",
+      "subtitle": "http://www.xinjianpan.com",
+      "comment": "//2025.02.05\n//by 天天的鸟蛋蛋 \n//正文 webView by 关耳 正文 解密by==  by水镜绘纱\n//发现 by 另一个书友圈\n// 设置书源变量 默认为0 0是调用解密\n//1是webView加载 下面的代码勿动\ncontent = java.getElement(\"@@class.content\");\nscript = result.match(/\\<script\\>var c=\"[\\s\\S]+?defer=\"defer\"\\>\\<\\/script\\>/)[0];\nscript = content+script;\n\nresult = java.webView(script,\"http://www.xinjianpan.com\",\"\")",
+      "path": "1748270493.json"
+    },
+    {
+      "title": "（favcomic）喜漫漫画",
+      "subtitle": "https://www.favcomic.net",
+      "comment": "2025/5/13\nby天天的鸟蛋蛋",
+      "path": "1748270701.json"
+    },
+    {
+      "title": "来漫画",
+      "subtitle": "https://m.laimanhua.org/",
+      "comment": "2025/5/6\nby天天的鸟蛋蛋",
+      "path": "1748270709.json"
+    },
+    {
+      "title": "💐 爱久久小说",
+      "subtitle": "https://www.jjjjxsw.com",
+      "comment": "\n\n可下载可在线观看,下载需要改成【文件】\n@天天的鸟蛋蛋：修复搜索\n原来的源只能用【发现】，\n我发现手机版能【搜索】，\n电脑版【搜索】找不到【列表】，\n于是就用手机版的【搜索】顶替电脑版的【搜索】。\n2025/3/5 更新优化搜索加入搜索下一页 优化，发现",
+      "path": "1748270720.json"
+    },
+    {
+      "title": "54看书-笔趣阁（天天书源）",
+      "subtitle": "https://m.54kanshu.com",
+      "comment": "\n创作：by天天的鸟蛋蛋\n20240726_修复搜索\n24/12/13阅读云搜索修复。\n25/3/16 更新阅读云搜索系列 更改搜索",
+      "path": "1748271619.json"
+    },
+    {
+      "title": "优品小说(天天)",
+      "subtitle": "https://www.youpinbook.com",
+      "comment": "\nby天天的鸟蛋蛋\n阅读云搜索\nljy911028：原请求头无法直搜\n# 遇到阅读云\n![Screenshot_2024-12-13-01-53-36-69_df198e732186825c8df26e3c5a10d7cd.jpg](http://img.wuaze.com/2024/12/13/675b24e82d244.jpg)\n方法一@柚屿. \n搜索js\nsite=实际网站情况\n比如m54kanshu\nm43kanshu\n```js\nhttps://www.sososhu.com/?site=youpin&q={{key}},{\n  headers: { \"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\" }}\n```\n列表规则js\n```js\n<js>\nif (result.match(/阅读云/)) {\n   u = baseUrl.split(',')[0]\n   cookie.removeCookie(u)\n   // java.startBrowserAwait(u, \"验证\")\n   java.webView(null, u, \"document.cookie\")\n   ck = cookie.getCookie(u)\n   head = JSON.stringify({ headers: { 'Cookie': ck } })\n   url = u + \",\" + head\n   result = java.ajax(url)\n}\nresult\n</js>\n.block > div > div:nth-child(n+1)\n```\n方法二@ljy911028\n登录认证js\n```js\nvar src = result.body();\nif(key && /ge_ua/.test(src)){\n\turl = java.ruleUrl;\n\tresult = java.startBrowserAwait(url, \"验证\");\n\t}\nresult\n```\n请求头js\n```js\n@js:  \nJSON.stringify({\"Referer\": baseUrl,  \n\"X-Requested-With\": \"mark.via\",  \n\"Accept-Language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7\",  \n\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\"})\n```\n 天天的鸟蛋蛋已修复\n \nsousou搜索，都自带24个分类，不写没人看，写了没人看  ——鲁迅\n \n可用地址：\n搜搜小说1 (一程)\nhttp://www.soeo.net\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n搜搜小说2\nhttps://www.sokanshu.com\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n",
+      "path": "1748271705.json"
+    },
+    {
+      "title": "笔趣阁",
+      "subtitle": "https://m.soushuwang.cc",
+      "comment": "//by 天天的鸟蛋蛋更改url\n// By情无羁修复,25.01.27,搜索重定向后把网址复制到URL即可\n\n/*同站一大堆\n修复搜索，可设置源变量限制搜索数量\n优化by:游客2580\n搜索加载by:Thomas&&youke2580\n以下同库网站可以自行替换网址\nm.wnxsw.cc\nm.quge.cc\nm.bq9.cc\nm.bqg18.cc\nm.bqg113.com\nm.bqg119.com\nm.bqg222.com\nm.bqg227.com\nm.p2wt.com\nm.wpxs.cc\nm.lwp7.com\nm.4z6p.com\nm.aofce.com\nm.fqxs123.com\nm.1q1m.com\nm.wnxsw.com\nm.shuhui8.cc\nm.ok120.net\nm.ecc6.com\nm.bqg332.com\nm.bqg122.com\nm.bqg18.cc\nm.shuhui8.cc\n*/",
+      "path": "1748271659.json"
+    },
+    {
+      "title": "📖 我爱读者",
+      "subtitle": "https://www.52dzxy.com/",
+      "comment": "//by天天的鸟蛋蛋\n//by等等补全发现。",
+      "path": "1748271646.json"
+    },
+    {
+      "title": "TapManga",
+      "subtitle": "https://www.antbyw.com",
+      "comment": "by天天的鸟蛋蛋 2025/2/22\n修复目录乱序 通过源变量 输入\"目录乱序\"来开启变量",
+      "path": "1748273820.json"
+    },
+    {
+      "title": "歪瑞古德漫画",
+      "subtitle": "https://www.veryim.com",
+      "comment": "//By情无羁25.02.17\n//by天天的鸟蛋蛋 正文解密无需webView \n//隔壁几章易没图",
+      "path": "1748273812.json"
+    },
+    {
+      "title": "华人论坛(魔法)",
+      "subtitle": "http://www.huarenv5.com",
+      "comment": "by天天的鸟蛋蛋 2025/2/11 完善目录和正文\n@= =  目录规则\n原创作时间未知 原创者名未知\n\n需要登录",
+      "path": "1748273790.json"
+    },
+    {
+      "title": "386小说",
+      "subtitle": "http://m.xs386.com",
+      "comment": "无法搜索，只能用发现。\nby天天的鸟蛋蛋 2025/3/3",
+      "path": "1748273826.json"
+    },
+    {
+      "title": "云图有声(需登录)",
+      "subtitle": "https://library.yuntuys.com/",
+      "comment": "//\n\tdy@天天的鸟蛋蛋\n\t(自）\n<\t#\n\t账号：sxslib 密码：666666\n\t #>",
+      "path": "1748273846.json"
+    },
+    {
+      "title": "二次元小说网",
+      "subtitle": "https://www.erciyan.com/",
+      "comment": "by天天的鸟蛋蛋\n阅读云（sososhu）搜索系列\n2025/3/5",
+      "path": "1748273832.json"
+    },
+    {
+      "title": "新键盘小说网",
+      "subtitle": "http://www.xinjianpan.com",
+      "comment": "//2025.02.05\n//by 天天的鸟蛋蛋 \n//正文 webView by 关耳 正文 解密by==  by水镜绘纱\n//发现 by 另一个书友圈\n// 设置书源变量 默认为0 0是调用解密\n//1是webView加载 下面的代码勿动\ncontent = java.getElement(\"@@class.content\");\nscript = result.match(/\\<script\\>var c=\"[\\s\\S]+?defer=\"defer\"\\>\\<\\/script\\>/)[0];\nscript = content+script;\n\nresult = java.webView(script,\"http://www.xinjianpan.com\",\"\")",
+      "path": "1748273856.json"
+    },
+    {
+      "title": "兔九三🐰",
+      "subtitle": "https://www.tu93.org",
+      "comment": "by天天的鸟蛋蛋 修复正文下一页\n和解决出现“文章不存在” 获取不到内容的情况\n修复已知问题\n//2025/1/28",
+      "path": "1748273873.json"
+    },
+    {
+      "title": "青豆小说网",
+      "subtitle": "https://www.jdzwo.com",
+      "comment": "by天天的鸟蛋蛋\n同模板\nwww.qhdbu.com\nwww.cxyxk.cn\nwww.jdzre.com\nwww.jdzwo.com\nwww.wfdtu.com ",
+      "path": "1748273909.json"
+    },
+    {
+      "title": "顶点小说wanglisong",
+      "subtitle": "https://www.wanglisong.com",
+      "comment": "by天天的鸟蛋蛋\n//2025/1/8 创建 \n原创 \n源仓库找过了没有\n阅读云（sososhu）搜索系列",
+      "path": "1748273917.json"
+    },
+    {
+      "title": "6G小说网",
+      "subtitle": "https://www.6gxs.net",
+      "comment": "//2025/1/8 by河鹅和 解密正文 byBuding 修复搜索\nby天天的鸟蛋蛋 提供正文解密思路 发现解密有两种情况 \n@= = 优化正文\n@情无羁  修复搜索问题 第一次搜索有认证 多搜几次就可以了\n\n//加载不了封面的和飞卢的第一章都没有\n\n总结\n需要输验证码\n获取内容解密有两种情况\n一种是aes 另一种是b64 \n\n//3.13 修复搜索，优化正文 by: youke2580\n搜索有盾，可在浏览器复制链接，再到阅读首页书架添加网址。\n正文有图片，需关闭替换净化，如显示不正常，可在阅读界面手动设置图片样式为TEXT",
+      "path": "1748273925.json"
+    }
+  ],
+  "collections": [
+    {
+      "title": "20250206合集",
+      "path": "20250206合集.json"
+    }
+  ]
+}
