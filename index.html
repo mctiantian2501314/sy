@@ -273,7 +273,7 @@
             visibility: visible;
             bottom: 40px;
         }
-    
+        /* ==== .*弹窗样式 begin ==== */
         #advertised-modal {
             display: flex;
             position: fixed;
@@ -325,8 +325,8 @@
         }
         .modal-ribbon {
             position: absolute;
-            top: 15px;
-            right: -30px;
+            top: 30px; 
+            right: -10px;
             background: #e74c3c;
             color: white;
             padding: 4px 32px;
@@ -474,11 +474,13 @@
             text-align: center;
         }
         @media (max-width: 768px) {
-            .modal-ribbon {top: 10px; right: -30px; font-size: 0.7rem; padding: 3px 26px;}
+            .modal-ribbon {top: 20px; 
+        right: -20px; font-size: 0.7rem; padding: 3px 26px;}
             .close-button {top: 5px; right: 5px; width: 26px; height: 26px; font-size: 1.2rem;}
         }
         @media (max-width: 480px) {
-            .modal-ribbon {top: 5px; right: -35px; font-size: 0.65rem; padding: 3px 22px;}
+            .modal-ribbon {top: 20px; 
+        right: -20px;font-size: 0.65rem; padding: 3px 22px;}
             .close-button {top: 3px; right: 3px; font-size: 1.1rem; width: 22px; height: 22px;}
             .modal-header h2 {font-size: 1.1rem;}
         }
