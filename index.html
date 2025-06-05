@@ -17,13 +17,7 @@
             --card-radius: 12px;
             --btn-radius: 6px;
         }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
+        * {box-sizing: border-box; margin: 0; padding: 0;}
         body {
             font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
             background: var(--bg-color);
@@ -33,12 +27,7 @@
             background: linear-gradient(135deg, #f5fbf9 0%, #e6f7f2 100%);
             min-height: 100vh;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
+        .container {max-width: 900px; margin: 0 auto;}
         h1 {
             color: #0c6b54;
             font-size: 2.5rem;
@@ -47,7 +36,6 @@
             text-align: center;
             display: block;
         }
-        
         h1:after {
             content: '';
             position: absolute;
@@ -59,7 +47,6 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
-        
         .description {
             color: var(--text-light);
             max-width: 700px;
@@ -67,13 +54,11 @@
             font-size: 1.1rem;
             text-align: center;
         }
-
         .search-container {
             max-width: 600px;
             margin: 0 auto 30px;
             position: relative;
         }
-        
         .search-box {
             display: flex;
             background: white;
@@ -82,7 +67,6 @@
             box-shadow: var(--shadow);
             border: 1px solid #d0ebe4;
         }
-        
         .search-box input {
             flex: 1;
             padding: 16px 24px;
@@ -91,7 +75,6 @@
             font-size: 16px;
             background: transparent;
         }
-        
         .search-box button {
             background: var(--primary-color);
             color: white;
@@ -102,23 +85,14 @@
             font-weight: 600;
             transition: background 0.3s;
         }
-        
-        .search-box button:hover {
-            background: var(--secondary-color);
-        }
-        
+        .search-box button:hover {background: var(--secondary-color);}
         .stats {
             text-align: center;
             margin-bottom: 20px;
             color: var(--text-light);
             font-size: 15px;
         }
-        
-        .stats span {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
+        .stats span {color: var(--primary-color); font-weight: 600;}
         .item {
             background: white;
             border-radius: var(--card-radius);
@@ -130,12 +104,7 @@
             position: relative;
             overflow: hidden;
         }
-        
-        .item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-        
+        .item:hover {transform: translateY(-5px); box-shadow: var(--shadow);}
         .item:before {
             content: '';
             position: absolute;
@@ -145,7 +114,6 @@
             height: 100%;
             background: var(--primary-color);
         }
-        
         .title {
             font-size: 20px;
             font-weight: 700;
@@ -154,12 +122,7 @@
             display: flex;
             align-items: center;
         }
-        
-        .title i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-        
+        .title i {margin-right: 10px; color: var(--primary-color);}
         .subtitle {
             font-size: 15px;
             color: var(--text-light);
@@ -167,7 +130,6 @@
             padding-left: 5px;
             word-break: break-all;
         }
-        
         .comment {
             background: #f0faf7;
             border-left: 3px solid var(--primary-color);
@@ -177,7 +139,6 @@
             color: #2a7f68;
             font-size: 14px;
         }
-        
         .comment-toggle {
             color: var(--primary-color);
             font-size: 13px;
@@ -186,14 +147,12 @@
             margin-top: 8px;
             font-weight: 600;
         }
-        
         .buttons {
             display: flex;
             gap: 12px;
             margin-top: 15px;
             flex-wrap: wrap;
         }
-        
         button {
             padding: 10px 20px;
             background: var(--primary-color);
@@ -209,24 +168,20 @@
             transition: all 0.3s;
             box-shadow: 0 2px 5px rgba(32, 201, 151, 0.3);
         }
-        
         button:hover {
             background: var(--secondary-color);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(32, 201, 151, 0.4);
         }
-        
         button.secondary {
             background: #e8f9f3;
             color: var(--secondary-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        
         button.secondary:hover {
             background: #d0f3e9;
             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
         }
-        
         table {
             width: 100%;
             margin-top: 20px;
@@ -235,45 +190,30 @@
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
-        thead {
-            background: var(--primary-color);
-            color: white;
-        }
-        
+        thead {background: var(--primary-color); color: white;}
         th {
             text-align: left;
             padding: 14px 16px;
             font-weight: 600;
         }
-        
         td {
             padding: 12px 16px;
             border-bottom: 1px solid #e1f5ee;
             font-size: 14px;
             word-break: break-all;
         }
-        
-        tr:nth-child(even) {
-            background-color: #f8fdfb;
-        }
-        
-        tr:hover {
-            background-color: #f0faf7;
-        }
-        
+        tr:nth-child(even) {background-color: #f8fdfb;}
+        tr:hover {background-color: #f0faf7;}
         .no-results {
             text-align: center;
             padding: 40px 20px;
             color: var(--text-light);
         }
-        
         .no-results i {
             font-size: 48px;
             color: #b8e6d9;
             margin-bottom: 15px;
         }
-        
         .footer {
             text-align: center;
             padding: 30px 0;
@@ -281,7 +221,6 @@
             font-size: 14px;
             margin-top: 20px;
         }
-        
         .collection-header {
             display: flex;
             align-items: center;
@@ -290,76 +229,29 @@
             padding-top: 15px;
             border-top: 1px dashed #d0ebe4;
         }
-        
         .end-msg {
             text-align: center;
             padding: 16px;
             color: #999;
             font-size: 14px;
         }
-
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .item {
-                padding: 20px;
-            }
-            
-            .title {
-                font-size: 18px;
-            }
-            
-            button {
-                padding: 8px 15px;
-                font-size: 13px;
-            }
-            
-            .search-box input {
-                padding: 14px 20px;
-            }
-            
-            .search-box button {
-                padding: 0 20px;
-            }
-            
-            th, td {
-                padding: 10px 12px;
-                font-size: 13px;
-            }
+            body {padding: 15px;}
+            h1 {font-size: 2rem;}
+            .item {padding: 20px;}
+            .title {font-size: 18px;}
+            button {padding: 8px 15px; font-size: 13px;}
+            .search-box input {padding: 14px 20px;}
+            .search-box button {padding: 0 20px;}
+            th, td {padding: 10px 12px; font-size: 13px;}
         }
-        
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .buttons {
-                gap: 8px;
-            }
-            
-            button {
-                flex: 1;
-                justify-content: center;
-            }
-            
-            .search-box {
-                flex-direction: column;
-                border-radius: var(--card-radius);
-            }
-            
-            .search-box input {
-                padding: 14px;
-            }
-            
-            .search-box button {
-                padding: 12px;
-            }
+            h1 {font-size: 1.8rem;}
+            .buttons {gap: 8px;}
+            button {flex: 1; justify-content: center;}
+            .search-box {flex-direction: column; border-radius: var(--card-radius);}
+            .search-box input {padding: 14px;}
+            .search-box button {padding: 12px;}
         }
         .toast {
             position: fixed;
@@ -381,6 +273,216 @@
             visibility: visible;
             bottom: 40px;
         }
+    
+        #advertised-modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        #advertised-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .ad-modal-container {
+            background: #fffef9;
+            border-radius: 12px;
+            width: 85%;
+            max-width: 380px;
+            box-shadow: 0 20px 40px rgba(15, 106, 84, 0.3);
+            overflow: hidden;
+            position: relative;
+            transform: scale(0.95) translateY(20px);
+            animation: adSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            border: 2px solid #0c6b54;
+        }
+        @keyframes adSlideIn {
+            to { 
+                transform: scale(1) translateY(0); 
+                opacity: 1;
+            }
+        }
+        .ad-modal-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M10,15 Q15,20 20,15 Q25,10 30,15 Q35,20 40,15 Q45,10 50,15 Q55,20 60,15 Q65,10 70,15 Q75,20 80,15 Q85,10 90,15" stroke="%230c6b54" fill="none" stroke-width="1"/></svg>') repeat-x;
+            opacity: 0.6;
+        }
+        .modal-ribbon {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #e74c3c;
+            color: white;
+            padding: 4px 32px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: center;
+            transform: rotate(45deg);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 1px solid #c0392b;
+        }
+        .modal-header {
+            background: #0c6b54;
+            color: #f9f4e8;
+            padding: 15px 10px 12px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid #0a5541;
+        }
+        .modal-header h2 {
+            font-size: 1.3rem;
+            margin: 5px 0 3px;
+            font-weight: 600;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .modal-header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+        .modal-body {padding: 15px; background: #fffaf0;}
+        .modal-body p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #5a4532;
+            margin-bottom: 8px;
+            padding: 5px 8px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            background: #fcf8ef;
+            border-radius: 4px;
+            border: 1px solid #e9e1d1;
+        }
+        .p-icon {min-width: 18px; font-size: 0.9em; color: #c0392b; margin-right: 8px; margin-top: 2px;}
+        .ad-image {
+            width: 100%;
+            margin: 10px 0 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #d1c4a7;
+            box-shadow: 0 2px 5px rgba(91, 71, 50, 0.1);
+        }
+        .ad-image img {width: 100%; height: auto; display: block;}
+        .links-container {padding: 8px 0; margin: 8px 0;}
+        .link-item {
+            margin-bottom: 10px;
+            padding: 9px 12px;
+            background: #faf6eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #d1c4a7;
+            transition: all 0.3s ease;
+        }
+        .link-item:hover {
+            background-color: rgba(231, 76, 60, 0.08);
+            border-color: #c0392b;
+        }
+        .link-icon {font-size: 1rem; color: #c0392b; margin-right: 12px;}
+        .link-text {flex: 1; overflow: hidden;}
+        .link-text a {
+            color: #0c6b54;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.83rem;
+            word-break: break-all;
+            display: block;
+            transition: color 0.2s;
+        }
+        .link-text a:hover {color: #c0392b; text-decoration: underline;}
+        .tags-ad {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 15px 0 10px;
+        }
+        .tag-ad {
+            background: #0c6b54;
+            color: #f9f4e8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            border: 1px solid #0a5541;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.4rem;
+            color: #f9f4e8;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(139, 115, 85, 0.7);
+            border: 1px solid #f9f4e8;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            z-index: 15;
+        }
+        .close-button:hover {
+            background: rgba(193, 57, 43, 0.8);
+            opacity: 1;
+            transform: rotate(180deg);
+        }
+        .countdown-container {padding: 0 5px; margin-top: 12px;}
+        .countdown-bar {
+            height: 6px;
+            background: #e9e1d1;
+            border-radius: 3px;
+            overflow: hidden;
+            border: 1px solid #d1c4a7;
+        }
+        .countdown-progress {
+            height: 100%;
+            width: 100%;
+            background: #c0392b;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        .countdown-text {
+            font-size: 0.8rem;
+            color: #8b7355;
+            margin-top: 8px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .modal-ribbon {top: 10px; right: -30px; font-size: 0.7rem; padding: 3px 26px;}
+            .close-button {top: 5px; right: 5px; width: 26px; height: 26px; font-size: 1.2rem;}
+        }
+        @media (max-width: 480px) {
+            .modal-ribbon {top: 5px; right: -35px; font-size: 0.65rem; padding: 3px 22px;}
+            .close-button {top: 3px; right: 3px; font-size: 1.1rem; width: 22px; height: 22px;}
+            .modal-header h2 {font-size: 1.1rem;}
+        }
+
     </style>
 </head>
 <body>
@@ -403,12 +505,58 @@
         <p>© 2025 天天的鸟蛋蛋 | 书源仅供学习交流使用</p>
     </div>
     <div id="toast" class="toast">✓ 已复制到剪贴板</div>
+
+    <div id="advertised-modal">
+        <div class="ad-modal-container">
+            <div class="modal-ribbon">限时优惠</div>
+            <div class="modal-header">
+                <h2><i class="fas fa-sim-card"></i> 大额流量卡免费领</h2>
+                <p>陌轩通讯 每日上新</p>
+                <span class="close-button">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="ad-image">
+                    <img src="https://s2.loli.net/2025/06/04/XsehWozJNU6kZVA.jpg" alt="流量卡">
+                </div>
+                <div class="links-container">
+                    <div class="link-item">
+                        <div class="link-icon"><i class="fas fa-link"></i></div>
+                        <div class="link-text">
+                            <a href="https://sourl.cn/yrm8S6" target="_blank">https://sourl.cn/yrm8S6</a>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="link-icon"><i class="fas fa-link"></i></div>
+                        <div class="link-text">
+                            <a href="https://sourl.cn/ADdLJZ" target="_blank">https://sourl.cn/ADdLJZ</a>
+                        </div>
+                    </div>
+                </div>
+                <p><span class="p-icon"><i class="fas fa-tag"></i></span>免费申领，邮费全免，非物联卡</p>
+                <p><span class="p-icon"><i class="fas fa-check"></i></span>缺流量卡可选，支持异地注销</p>
+                <p><span class="p-icon"><i class="fas fa-clock"></i></span>优惠限量，售罄可选同类卡片</p>
+                <p><span class="p-icon"><i class="fas fa-id-card"></i></span>官方正品卡，需真实信息办理</p>
+                <div class="tags-ad">
+                    <div class="tag-ad">好卡推荐</div>
+                    <div class="tag-ad">电话卡</div>
+                    <div class="tag-ad">流量卡</div>
+                </div>
+                <div class="countdown-container">
+                    <div class="countdown-bar">
+                        <div class="countdown-progress" id="countdownProgress"></div>
+                    </div>
+                    <div class="countdown-text" id="countdownText">10秒后自动关闭</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script>
     const DOMAIN = window.location.origin + '/sy/';
     let allData = [];
     let filteredData = [];
     let currentPage = 1;
-    const pageSize = 1000; // 一次全部显示
+    const pageSize = 1000;
     const list = document.getElementById('list');
 
     function escapeHtml(text) {
@@ -423,13 +571,10 @@
             }[match];
         });
     }
-
     function updateStats() {
         document.getElementById('totalCount').textContent = allData.length;
         document.getElementById('displayCount').textContent = filteredData.length;
     }
-
-    // 初始化加载
     fetch('data.json')
         .then(res => res.json())
         .then(data => {
@@ -438,8 +583,6 @@
             renderAll();
             updateStats();
         });
-
-    // 搜索功能
     function doSearch() {
         const keyword = document.getElementById('search-input').value.trim().toLowerCase();
         if (!keyword) {
@@ -458,8 +601,6 @@
     document.getElementById('search-input').addEventListener('keyup', function(e) {
         if (e.key === 'Enter') doSearch();
     });
-
-    // 一次性渲染全部
     function renderAll() {
         list.innerHTML = '';
         if (filteredData.length === 0) {
@@ -472,7 +613,6 @@
         });
         document.querySelector('.end-msg').textContent = '已经到底啦~';
     }
-
     function generateItemHTML(item) {
         let commentHTML = '';
         if (item.comment) {
@@ -511,7 +651,6 @@
             </div>
         `;
     }
-
     function toggleComment(button) {
         const commentDiv = button.parentElement;
         const fullComment = decodeURIComponent(commentDiv.dataset.fullComment);
@@ -532,7 +671,6 @@
             `;
         }
     }
-
     async function toggleCollection(btn, path) {
         const detail = btn.parentElement.parentElement.querySelector('.collection-detail');
         if (detail.innerHTML) {
@@ -554,7 +692,6 @@
                         <tr>
                             <th>书源名称</th>
                             <th>书源链接</th>
-                            
                         </tr>
                     </thead>
                     <tbody>
@@ -562,7 +699,6 @@
                             <tr>
                                 <td>${escapeHtml(item.bookSourceName || '')}</td>
                                 <td>${escapeHtml(item.bookSourceUrl || '')}</td>
-                                
                             </tr>
                         `).join('')}
                     </tbody>
@@ -574,12 +710,9 @@
             btn.innerHTML = '<i class="fas fa-list"></i> 查看合集';
         }
     }
-
     function handleImport(path) {
         location.href = `legado://import/source?src=${encodeURIComponent(DOMAIN + path)}`;
     }
-
-    // 新的复制逻辑，带 toast
     function copyUrlWithToast(path) {
         const fullUrl = DOMAIN + path;
         navigator.clipboard.writeText(fullUrl).then(() => {
@@ -588,13 +721,55 @@
             alert('复制失败，请手动复制以下链接:\n' + fullUrl);
         });
     }
-
-    // toast 显示
     function showToast() {
         const toast = document.getElementById('toast');
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 2000);
     }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        function setupAdModal() {
+            const adModal = document.getElementById("advertised-modal");
+            const closeButton = document.querySelector(".close-button");
+            const countdownProgress = document.getElementById("countdownProgress");
+            const countdownText = document.getElementById("countdownText");
+            let timer;
+            function closeAd() {
+                adModal.classList.remove("show");
+                clearInterval(timer);
+                if(adModal.timeout) clearTimeout(adModal.timeout);
+            }
+            closeButton.addEventListener('click', closeAd);
+            adModal.addEventListener('click', function(event) {
+                if (event.target === adModal) closeAd();
+            });
+            function startCountdown() {
+                let seconds = 10;
+                countdownText.textContent = `${seconds}秒后自动关闭`;
+                countdownProgress.style.width = "100%";
+                timer = setInterval(() => {
+                    seconds--;
+                    countdownText.textContent = `${seconds}秒后自动关闭`;
+                    countdownProgress.style.width = `${seconds * 10}%`;
+                    if (seconds <= 0) {
+                        clearInterval(timer);
+                        closeAd();
+                    }
+                }, 1000);
+            }
+            adModal.timeout = setTimeout(() => {
+                if (!adModal.classList.contains("show")) {
+                    adModal.style.display = "flex";
+                    setTimeout(() => {
+                        adModal.classList.add("show");
+                        startCountdown();
+                    }, 50);
+                }
+            }, 3000);
+        }
+        setupAdModal();
+    });
+    
 </script>
 </body>
 </html>
