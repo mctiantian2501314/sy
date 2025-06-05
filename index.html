@@ -6,7 +6,7 @@
     <title>天天的小站-书源列表</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
+      :root {
             --primary-color: #20c997;
             --secondary-color: #0fa678;
             --border-color: #eaecef;
@@ -17,8 +17,350 @@
             --card-radius: 12px;
             --btn-radius: 6px;
         }
-        /* ......原有样式省略...... */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5fbf9 0%, #e6f7f2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
+        h1 {
+            color: #0c6b54;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            text-align: center;
+            display: block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .description {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 25px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #d0ebe4;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+        }
+        
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 28px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .search-box button:hover {
+            background: var(--secondary-color);
+        }
+        
+        .stats {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+        
+        .stats span {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .item {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e1f5ee;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0c6b54;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .title i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            padding-left: 5px;
+            word-break: break-all;
+        }
+        
+        .comment {
+            background: #f0faf7;
+            border-left: 3px solid var(--primary-color);
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 0 var(--btn-radius) var(--btn-radius) 0;
+            color: #2a7f68;
+            font-size: 14px;
+        }
+        
+        .comment-toggle {
+            color: var(--primary-color);
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: var(--primary-color);
+            border: none;
+            border-radius: var(--btn-radius);
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(32, 201, 151, 0.3);
+        }
+        
+        button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(32, 201, 151, 0.4);
+        }
+        
+        button.secondary {
+            background: #e8f9f3;
+            color: var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        button.secondary:hover {
+            background: #d0f3e9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            border-radius: var(--btn-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        thead {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        th {
+            text-align: left;
+            padding: 14px 16px;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e1f5ee;
+            font-size: 14px;
+            word-break: break-all;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8fdfb;
+        }
+        
+        tr:hover {
+            background-color: #f0faf7;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+        
+        .no-results i {
+            font-size: 48px;
+            color: #b8e6d9;
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        
+        .collection-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #d0ebe4;
+        }
+        
+        .end-msg {
+            text-align: center;
+            padding: 16px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .item {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 18px;
+            }
+            
+            button {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+            
+            .search-box input {
+                padding: 14px 20px;
+            }
+            
+            .search-box button {
+                padding: 0 20px;
+            }
+            
+            th, td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .buttons {
+                gap: 8px;
+            }
+            
+            button {
+                flex: 1;
+                justify-content: center;
+            }
+            
+            .search-box {
+                flex-direction: column;
+                border-radius: var(--card-radius);
+            }
+            
+            .search-box input {
+                padding: 14px;
+            }
+            
+            .search-box button {
+                padding: 12px;
+            }
+        }
         .toast {
             position: fixed;
             bottom: 30px;
