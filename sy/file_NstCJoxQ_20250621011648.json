@@ -1,0 +1,37 @@
+[
+  {
+    "bookSourceName": "古龙小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.gulongwang.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "古龙小说::https://www.gulongwang.com",
+    "lastUpdateTime": 1750439793668,
+    "respondTime": 180000,
+    "ruleBookInfo": {},
+    "ruleContent": {
+      "content": ".nr_con@html"
+    },
+    "ruleExplore": {
+      "bookList": ".shuming > li:nth-child(n+1)",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "name": "a@text"
+    },
+    "ruleSearch": {
+      "bookList": "<js>var src=java.ajax(source.getKey())\n//java.log(src)\nvar JsDom = Packages.org.jsoup.Jsoup;\nvar Document = Packages.org.jsoup.nodes.Document;\nvar Element = Packages.org.jsoup.nodes.Element;\nvar document = JsDom.parse(src);\n\nvar items = document.select(\".shuming > li\");\nvar result = [];\n\n\nfor (var i = 0; i < items.size(); i++) {\n    var li = items.get(i);\n    var obj = {};\n    \n    \n    var textElement = li.select(\"p > a\").first();\n    obj.text = textElement ? textElement.text() : \"\";\n    \n   \n    obj.url = textElement ? textElement.attr(\"href\") : \"\";\n    \n   \n    var imgElement = li.select(\"a.tu > img\").first();\n    obj.img = imgElement ? imgElement.attr(\"src\") : \"\";\n    \n    result.push(obj);\n}\nJSON.stringify(result);\n</js>\n$[*]",
+      "bookUrl": "$.url",
+      "coverUrl": "$.img",
+      "name": "$.text"
+    },
+    "ruleToc": {
+      "chapterList": ".lb@ul@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "https://www.gulongwang.com",
+    "weight": 0
+  }
+]
