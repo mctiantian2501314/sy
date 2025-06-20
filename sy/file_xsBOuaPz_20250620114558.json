@@ -1,0 +1,41 @@
+[
+  {
+    "bookSourceName": "一页书",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.shacg.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "lastUpdateTime": 1750389621026,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property$=author]@content",
+      "coverUrl": "[property$=image]@content",
+      "intro": "[property$=description]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property$=image]@content",
+      "name": "[property$=book_name]@content",
+      "wordCount": ".blue.0@text"
+    },
+    "ruleContent": {
+      "content": ".readcontent@textNodes"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author@text",
+      "bookList": ".bookbox",
+      "bookUrl": "a.0@href",
+      "intro": ".update@textNodes",
+      "lastChapter": ".cat@a@text",
+      "name": ".bookname@text"
+    },
+    "ruleToc": {
+      "chapterList": "#list-chapterAll@dd@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/modules/article/search1.php,{\n  \"body\": \"searchkey={{key}}&action=login&submit=\",\n  \"charset\": \"GBK\",\n  \"method\": \"POST\"\n}",
+    "weight": 0
+  }
+]
