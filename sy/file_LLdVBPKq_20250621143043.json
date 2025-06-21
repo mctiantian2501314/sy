@@ -1,0 +1,45 @@
+[
+  {
+    "bookSourceComment": "20250621\nby天天的鸟蛋蛋\n通过书籍变量切换卷",
+    "bookSourceName": "拷贝漫画",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://mapi.copy20.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36 EdgA/137.0.0.0\",\n  \"sec-ch-ua-mobile\": \"?1\",\n  \"webp\": \"0\",\n  \"version\": \"2025.05.09\",\n  \"platform\": \"1\",\n  \"region\": \"0\",\n  \"Origin\": \"https://www.copy20.com\",\n  \"X-Requested-With\": \"cn.mujiankeji.mbrowser\",\n  \"Sec-Fetch-Site\": \"same-site\",\n  \"Accept-Language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6,zh-HK;q=0.5\"\n}",
+    "lastUpdateTime": 1750487386311,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "author@js:java.t2s(result)",
+      "coverUrl": "cover",
+      "init": "<js>var data = JSON.parse(result);\nvar comic = data.results.comic;\nvar author = \"\";\nif (comic.author && Array.isArray(comic.author)) {\n    var authorNames = [];\n    for (var a = 0; a < comic.author.length; a++) {\n        var authorName = comic.author[a].name || \"\";\n        authorNames.push(authorName.replace(/\\s/g, \"，\"));\n    }\n    author = authorNames.join(\"，\");\n}\n    \nvar kindParts = [];\nif (comic.theme && Array.isArray(comic.theme)) {\n    var themes = [];\n    for (var t = 0; t < Math.min(comic.theme.length, 3); t++) {\n        if (comic.theme[t].name) {\n            themes.push(comic.theme[t].name);\n        }\n    }\n    if (themes.length > 0) {\n        kindParts.push(themes.join(\",\"));\n    }\n}\n\nif (comic.status && comic.status.display) {\n    kindParts.push(comic.status.display);\n}\nif (comic.females && Array.isArray(comic.females)) {\n    var females = [];\n    for (var f = 0; f < Math.min(comic.females.length, 3); f++) {\n        if (comic.females[f].name) {\n            females.push(comic.females[f].name);\n        }\n    }\n    if (females.length > 0) {\n        kindParts.push(females.join(\",\"));\n    }\n}\nvar kind = kindParts.join(\",\");\n\n\nvar name = comic.name || \"\";\nvar cover = comic.cover || \"\";\nvar lastchapter = \"\";\nvar introText = comic.brief || \"\";\nvar groups = data.results.groups;\nvar groupNames = [];\nvar groupPathWords = []; \n//java.log(JSON.stringify(groups))\nfor (var key in groups) {\n    if (groups.hasOwnProperty(key)) {\n        var group = groups[key];\n        if (group.name && group.path_word) {\n            groupNames.push(group.name);\n            groupPathWords.push(group.path_word);\n        }\n    }\n}\nv = book.getVariable(\"custom\") !=\"\" ? book.getVariable(\"custom\") : \"0\"//获取变量严重代码不可改变，永不变的恒定。\nif (v >= groupPathWords.length || v < 0) {\n    v = groupPathWords.length > 0 ? Math.floor(Math.random() * groupPathWords.length) : 0;\n}\nvar usage = \"\\n📌使用说明：设置书籍变量切换分卷来源（默认0）\";\nvar currentSource = groupPathWords.length > 0 \n    ? \"\\n🎯当前分卷源：序号🔺\" + v + \"🔻【\" + (groupNames[v] ) + \"】\" \n    : \"\\n⚠️无可用分卷源\";\nvar n = \"\";\nfor (var o = 0; o < groupNames.length; o++) {\n    var prefix = (o === 0) ? \"⭐默认 \" : \"❤\";\n    n += prefix + \"序号🔺\" + o + \"🔻【\" + groupNames[o] + \"】\\n\";\n}\nvar intro = introText + \"\\n\" + usage + currentSource + \"\\n\" + n;\n\nvar url = \"\";\nif (groupPathWords.length > 0 && comic.path_word) {\n    url = \"/api/v3/comic/\" + comic.path_word + \n          \"/group/\" + groupPathWords[v] + \n          \"/chapters?limit=100&offset=0&_update=true\";\n}\nJSON.stringify({\n    name: name,\n    author: author,\n    kind: kind,\n    lastchapter: lastchapter,\n    intro: intro,\n    cover: cover,\n    url: url\n});</js>",
+      "intro": "intro@js:java.t2s(result)",
+      "kind": "kind@js:java.t2s(result)##\\[|\\]",
+      "name": "name@js:java.t2s(result)",
+      "tocUrl": "url"
+    },
+    "ruleContent": {
+      "content": "<js>\nvar data=JSON.parse(result)\nvar imageList=data.results.chapter.contents\nvar imgTags = imageList.map(item => `<img src=\"${item.url}\">`).join('\\n');\nimgTags;\n</js>"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "$.author[*].name##\\s##，",
+      "bookList": "$.results.list[*]",
+      "bookUrl": "/api/v3/comic2/{{$.path_word}}?platform=1&_update=true",
+      "checkKeyWord": "来自深渊",
+      "coverUrl": "cover",
+      "kind": "alias",
+      "name": "name@js:java.t2s(result)"
+    },
+    "ruleToc": {
+      "chapterList": "$.results.list[*]",
+      "chapterName": "name@js:java.t2s(result)",
+      "chapterUrl": "/api/v3/comic/{{$.comic_path_word}}/chapter2/{{$.uuid}}?platform=1&_update=true",
+      "nextTocUrl": "@js:\npage=parseInt('{{$.results.total}}')/100;\npage=parseInt(page);\nlist=[];\nif(page){\nfor(i=1;i<=page;i++){\na=baseUrl.replace(/offset=\\d+/,'offset='+(page*100));\nlist.push(a)\n}\nlist\n}"
+    },
+    "searchUrl": "/api/v3/search/comic?platform=1&q={{key}}&limit=20&offset={{(page-1)*20}}&q_type&_update=true",
+    "weight": 0
+  }
+]
