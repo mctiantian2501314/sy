@@ -1,0 +1,53 @@
+[
+  {
+    "bookSourceComment": "2025/6/24\n源2025.1.10 by辞晨 \n2k小说改by天天的鸟蛋蛋 2025/6/24",
+    "bookSourceName": "番(伪)茄",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.zym888.com/",
+    "customOrder": 56,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"全部🏷分类\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},\n{\"title\":\"玄幻\",\"url\":\"/fenlei1/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/fenlei2/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/fenlei3/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/fenlei4/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/fenlei5/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/fenlei6/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/fenlei7/\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"全本\",\"url\":\"/quanben/\",\"style\":{\"layout_flexGrow\":1}}]",
+    "lastUpdateTime": 1750729287803,
+    "loginUi": "[\n    {\n        name: \"登录\",\n        type: \"button\",\n        action: \"java.startBrowser('https://m.zym888.com/','用户登入')\"\n    }\n]",
+    "loginUrl": "function login(){}",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:author\"]@content",
+      "coverUrl": "[property=\"og:image\"]@content",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property~=las?test_chapter_name]@content",
+      "name": "[property=\"og:novel:book_name\"]@content"
+    },
+    "ruleContent": {
+      "content": "#text@html"
+    },
+    "ruleExplore": {
+      "author": "p.0@text",
+      "bookList": "#list@article",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "intro": ".intro@text##简介：",
+      "name": "h2@text"
+    },
+    "ruleSearch": {
+      "author": "$.author",
+      "bookList": "$.data.search[*]",
+      "bookUrl": "$.book_detail_url",
+      "coverUrl": "$.cover",
+      "intro": "$.intro",
+      "kind": "$.cate_name",
+      "lastChapter": "$.status_str",
+      "name": "$.book_name"
+    },
+    "ruleToc": {
+      "chapterList": "-.chapter@li",
+      "chapterName": "a@text\n@js:result\n.replace(/^(\\d+)章/,'第$1章')\n.replace(/^(\\d+)\\./,'第$1章')",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "<js>\ncookie.removeCookie(source.getKey());\nurl = \"/api/search\";\nr = java.ajax(baseUrl);\ns = r.match(/var\\s\\w+\\s*=\\s*\"\\w+\";/g).join('');\neval(s);\n//java.log(s)\nvar bd = {\n  \"body\":  `q=${key}&vw=${vw}&abw=${abw}&ru=${ru}&jrt=${jrt}&van=${van}&fw=${fw}&cwl=${cwl}&gpr=${gpr}&uyoo=${uyoo}&tz=${tz}&euu=${euu}&tsn=${tsn}&eju=${eju}&um=${um}&fp=${fp}&dvm=${dvm}&jpk=${jpk}&deblkx=${deblkx}&ht=${ht}&azy=${azy}&sna=${sna}&wqx=${wqx}&fpp=${fpp}&rup=${rup}&jwj=${jwj}&bgt=${bgt}&qp=${qp}&yf=${yf}&cw=${cw}&wq=${wq}&sign=${sign}`,\n  \"method\": \"POST\"\n}\nbjson = JSON.stringify(bd);\nurl + ',' + bjson;\n</js>\n",
+    "weight": 0
+  }
+]
