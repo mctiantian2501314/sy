@@ -1,22 +1,22 @@
 {
   "sources": [
     {
+      "title": "二三中文",
+      "subtitle": "http://wap.ersanxs.info",
+      "comment": "by天天的鸟蛋蛋\nby关耳 替换规则正则表达式",
+      "path": "1748262326.json"
+    },
+    {
       "title": "小说虎",
       "subtitle": "https://m.xshbook.com",
-      "comment": "05/18 by天天的鸟蛋蛋\n阅读云（sososhu）搜索系列+1",
+      "comment": "by天天的鸟蛋蛋\n阅读云（sososhu）搜索系列+1",
       "path": "1748262337.json"
     },
     {
       "title": "漫画鱼",
       "subtitle": "https://www.manhuayu8.com",
-      "comment": "05/18 by天天的鸟蛋蛋\n同模板：https://www.haoduoman.com\nwebView解密 ",
+      "comment": "by天天的鸟蛋蛋\n同模板：https://www.haoduoman.com\nwebView解密 ",
       "path": "1748262347.json"
-    },
-    {
-      "title": "二三中文",
-      "subtitle": "http://wap.ersanxs.info",
-      "comment": "05/18 by天天的鸟蛋蛋\nby关耳 替换规则正则表达式",
-      "path": "1748262326.json"
     },
     {
       "title": "风车漫画",
@@ -51,7 +51,7 @@
     {
       "title": "💐 爱久久小说",
       "subtitle": "https://www.jjjjxsw.com",
-      "comment": "04/29\n\n可下载可在线观看,下载需要改成【文件】\n@天天的鸟蛋蛋：修复搜索\n原来的源只能用【发现】，\n我发现手机版能【搜索】，\n电脑版【搜索】找不到【列表】，\n于是就用手机版的【搜索】顶替电脑版的【搜索】。\n2025/3/5 更新优化搜索加入搜索下一页 优化，发现",
+      "comment": "\n\n可下载可在线观看,下载需要改成【文件】\n@天天的鸟蛋蛋：修复搜索\n原来的源只能用【发现】，\n我发现手机版能【搜索】，\n电脑版【搜索】找不到【列表】，\n于是就用手机版的【搜索】顶替电脑版的【搜索】。\n2025/3/5 更新优化搜索加入搜索下一页 优化，发现",
       "path": "1748270720.json"
     },
     {
@@ -61,10 +61,10 @@
       "path": "1748271619.json"
     },
     {
-      "title": "优品小说(天天)",
-      "subtitle": "https://www.youpinbook.com",
-      "comment": "\nby天天的鸟蛋蛋\n阅读云搜索\nljy911028：原请求头无法直搜\n# 遇到阅读云\n![Screenshot_2024-12-13-01-53-36-69_df198e732186825c8df26e3c5a10d7cd.jpg](http://img.wuaze.com/2024/12/13/675b24e82d244.jpg)\n方法一@柚屿. \n搜索js\nsite=实际网站情况\n比如m54kanshu\nm43kanshu\n```js\nhttps://www.sososhu.com/?site=youpin&q={{key}},{\n  headers: { \"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\" }}\n```\n列表规则js\n```js\n<js>\nif (result.match(/阅读云/)) {\n   u = baseUrl.split(',')[0]\n   cookie.removeCookie(u)\n   // java.startBrowserAwait(u, \"验证\")\n   java.webView(null, u, \"document.cookie\")\n   ck = cookie.getCookie(u)\n   head = JSON.stringify({ headers: { 'Cookie': ck } })\n   url = u + \",\" + head\n   result = java.ajax(url)\n}\nresult\n</js>\n.block > div > div:nth-child(n+1)\n```\n方法二@ljy911028\n登录认证js\n```js\nvar src = result.body();\nif(key && /ge_ua/.test(src)){\n\turl = java.ruleUrl;\n\tresult = java.startBrowserAwait(url, \"验证\");\n\t}\nresult\n```\n请求头js\n```js\n@js:  \nJSON.stringify({\"Referer\": baseUrl,  \n\"X-Requested-With\": \"mark.via\",  \n\"Accept-Language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7\",  \n\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\"})\n```\n 天天的鸟蛋蛋已修复\n \nsousou搜索，都自带24个分类，不写没人看，写了没人看  ——鲁迅\n \n可用地址：\n搜搜小说1 (一程)\nhttp://www.soeo.net\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n搜搜小说2\nhttps://www.sokanshu.com\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n",
-      "path": "1748271705.json"
+      "title": "📖 我爱读者",
+      "subtitle": "https://www.52dzxy.com/",
+      "comment": "//by天天的鸟蛋蛋\n//by等等补全发现。",
+      "path": "1748271646.json"
     },
     {
       "title": "笔趣阁",
@@ -73,22 +73,10 @@
       "path": "1748271659.json"
     },
     {
-      "title": "📖 我爱读者",
-      "subtitle": "https://www.52dzxy.com/",
-      "comment": "//by天天的鸟蛋蛋\n//by等等补全发现。",
-      "path": "1748271646.json"
-    },
-    {
-      "title": "TapManga",
-      "subtitle": "https://www.antbyw.com",
-      "comment": "by天天的鸟蛋蛋 2025/2/22\n修复目录乱序 通过源变量 输入\"目录乱序\"来开启变量",
-      "path": "1748273820.json"
-    },
-    {
-      "title": "歪瑞古德漫画",
-      "subtitle": "https://www.veryim.com",
-      "comment": "//By情无羁25.02.17\n//by天天的鸟蛋蛋 正文解密无需webView \n//隔壁几章易没图",
-      "path": "1748273812.json"
+      "title": "优品小说(天天)",
+      "subtitle": "https://www.youpinbook.com",
+      "comment": "\nby天天的鸟蛋蛋\n阅读云搜索\nljy911028：原请求头无法直搜\n# 遇到阅读云\n![Screenshot_2024-12-13-01-53-36-69_df198e732186825c8df26e3c5a10d7cd.jpg](http://img.wuaze.com/2024/12/13/675b24e82d244.jpg)\n方法一@柚屿. \n搜索js\nsite=实际网站情况\n比如m54kanshu\nm43kanshu\n```js\nhttps://www.sososhu.com/?site=youpin&q={{key}},{\n  headers: { \"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\" }}\n```\n列表规则js\n```js\n<js>\nif (result.match(/阅读云/)) {\n   u = baseUrl.split(',')[0]\n   cookie.removeCookie(u)\n   // java.startBrowserAwait(u, \"验证\")\n   java.webView(null, u, \"document.cookie\")\n   ck = cookie.getCookie(u)\n   head = JSON.stringify({ headers: { 'Cookie': ck } })\n   url = u + \",\" + head\n   result = java.ajax(url)\n}\nresult\n</js>\n.block > div > div:nth-child(n+1)\n```\n方法二@ljy911028\n登录认证js\n```js\nvar src = result.body();\nif(key && /ge_ua/.test(src)){\n\turl = java.ruleUrl;\n\tresult = java.startBrowserAwait(url, \"验证\");\n\t}\nresult\n```\n请求头js\n```js\n@js:  \nJSON.stringify({\"Referer\": baseUrl,  \n\"X-Requested-With\": \"mark.via\",  \n\"Accept-Language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7\",  \n\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10; PACM00 Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.79 Mobile Safari/537.36\"})\n```\n 天天的鸟蛋蛋已修复\n \nsousou搜索，都自带24个分类，不写没人看，写了没人看  ——鲁迅\n \n可用地址：\n搜搜小说1 (一程)\nhttp://www.soeo.net\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n搜搜小说2\nhttps://www.sokanshu.com\n搜索地址：\n@js:\nlet url = 'https://www.sososhu.com/?site=soeonet&q={{java.encodeURI(key)}}' \nlet ck = cookie.getCookie(url);\nlet head = JSON.stringify({\n  headers: { 'Cookie': ck }\n})\nurl + \",\" + head\n",
+      "path": "1748271705.json"
     },
     {
       "title": "华人论坛(魔法)",
@@ -97,22 +85,34 @@
       "path": "1748273790.json"
     },
     {
+      "title": "歪瑞古德漫画",
+      "subtitle": "https://www.veryim.com",
+      "comment": "//By情无羁25.02.17\n//by天天的鸟蛋蛋 正文解密无需webView \n//隔壁几章易没图",
+      "path": "1748273812.json"
+    },
+    {
+      "title": "TapManga",
+      "subtitle": "https://www.antbyw.com",
+      "comment": "by天天的鸟蛋蛋 2025/2/22\n修复目录乱序 通过源变量 输入\"目录乱序\"来开启变量",
+      "path": "1748273820.json"
+    },
+    {
       "title": "386小说",
       "subtitle": "http://m.xs386.com",
       "comment": "无法搜索，只能用发现。\nby天天的鸟蛋蛋 2025/3/3",
       "path": "1748273826.json"
     },
     {
-      "title": "云图有声(需登录)",
-      "subtitle": "https://library.yuntuys.com/",
-      "comment": "//\n\tdy@天天的鸟蛋蛋\n\t(自）\n<\t#\n\t账号：sxslib 密码：666666\n\t #>",
-      "path": "1748273846.json"
-    },
-    {
       "title": "二次元小说网",
       "subtitle": "https://www.erciyan.com/",
       "comment": "by天天的鸟蛋蛋\n阅读云（sososhu）搜索系列\n2025/3/5",
       "path": "1748273832.json"
+    },
+    {
+      "title": "云图有声(需登录)",
+      "subtitle": "https://library.yuntuys.com/",
+      "comment": "//\n\tdy@天天的鸟蛋蛋\n\t(自）\n<\t#\n\t账号：sxslib 密码：666666\n\t #>",
+      "path": "1748273846.json"
     },
     {
       "title": "新键盘小说网",
@@ -143,6 +143,66 @@
       "subtitle": "https://www.6gxs.net",
       "comment": "//2025/1/8 by河鹅和 解密正文 byBuding 修复搜索\nby天天的鸟蛋蛋 提供正文解密思路 发现解密有两种情况 \n@= = 优化正文\n@情无羁  修复搜索问题 第一次搜索有认证 多搜几次就可以了\n\n//加载不了封面的和飞卢的第一章都没有\n\n总结\n需要输验证码\n获取内容解密有两种情况\n一种是aes 另一种是b64 \n\n//3.13 修复搜索，优化正文 by: youke2580\n搜索有盾，可在浏览器复制链接，再到阅读首页书架添加网址。\n正文有图片，需关闭替换净化，如显示不正常，可在阅读界面手动设置图片样式为TEXT",
       "path": "1748273925.json"
+    },
+    {
+      "title": "全本小说quanben",
+      "subtitle": "https://www.quanben.io",
+      "comment": "2025/6/24\nby天天的鸟蛋蛋 正文解密无需webView",
+      "path": "file_FXsimPVu_20250624083316.json"
+    },
+    {
+      "title": "番(伪)茄",
+      "subtitle": "https://m.zym888.com/",
+      "comment": "2025/6/24\n源2025.1.10 by辞晨 \n2k小说改by天天的鸟蛋蛋 2025/6/24",
+      "path": "file_LArpJhZX_20250624094158.json"
+    },
+    {
+      "title": "拷贝漫画",
+      "subtitle": "https://mapi.copy20.com",
+      "comment": "20250621\nby天天的鸟蛋蛋\n通过书籍变量切换卷",
+      "path": "file_LLdVBPKq_20250621143043.json"
+    },
+    {
+      "title": "古龙小说",
+      "subtitle": "https://www.gulongwang.com",
+      "comment": "20250621by天天的鸟蛋蛋",
+      "path": "file_NstCJoxQ_20250621011648.json"
+    },
+    {
+      "title": "笔趣e",
+      "subtitle": "https://m.biqubao10.com",
+      "comment": "20250621\nby天天的鸟蛋蛋",
+      "path": "file_PQqsUrXS_20250621182612.json"
+    },
+    {
+      "title": "顶点小说网",
+      "subtitle": "http://www.xs222.tw",
+      "comment": "20250621\n和大唐小说同模板：https://www.hzxsw.com\ndy天天的鸟蛋蛋\n//这个小说网简介里面的网站基本都是同模板。\n除了分类不一样。\n如\n请看小说网：https://www.qingkan9.com/\n笔趣阁小说网：http://www.03030.cc/\n。。。\n分类1\n[{\"title\":\"玄幻\",\"url\":\"/list1/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/list2/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/list3/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/list4/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/list5/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/list6/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/list7/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/list8/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"排行\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"周榜\",\"url\":\"/top/week_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/week_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/week_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/week_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/week_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/week_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/week_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/week_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/week_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}}\n,{\"title\":\"月榜\",\"url\":\"/top/month_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/month_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/month_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/month_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/month_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/month_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/month_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/month_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/month_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"总榜\",\"url\":\"/top/all_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/all_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/all_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/all_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/all_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/all_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/all_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/all_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/all_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"完本\",\"url\":\"/full/0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/full/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/full/2_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/full/3_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/full/4_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/full/5_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/full/6_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/full/7_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/full/8_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}}]\n分类二\n[{\"title\":\"玄幻\",\"url\":\"/1/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/2/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/3/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/4/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/5/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/6/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/7/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/8/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"排行\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"周榜\",\"url\":\"/top/week_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/week_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/week_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/week_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/week_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/week_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/week_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/week_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/week_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}}\n,{\"title\":\"月榜\",\"url\":\"/top/month_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/month_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/month_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/month_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/month_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/month_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/month_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/month_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/month_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"总榜\",\"url\":\"/top/all_0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/top/all_1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/top/all_2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/top/all_3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/top/all_4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/top/all_5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/top/all_6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/top/all_7_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/top/all_8_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.2,\"layout_flexGrow\":1}},{\"title\":\"完本\",\"url\":\"/full/0_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"玄幻\",\"url\":\"/full/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"武侠\",\"url\":\"/full/2_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"都市\",\"url\":\"/full/3_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"历史\",\"url\":\"/full/4_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"网游\",\"url\":\"/full/5_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"科幻\",\"url\":\"/full/6_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"言情\",\"url\":\"/full/7_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}},{\"title\":\"其他\",\"url\":\"/full/8_{{page}}.html\",\"style\":{\"layout_flexGrow\":1}}]",
+      "path": "file_QNlrhmdK_20250621181130.json"
+    },
+    {
+      "title": "歪瑞古德漫画",
+      "subtitle": "https://www.veryim.com",
+      "comment": "//By情无羁25.02.17\n//by天天的鸟蛋蛋 正文解密无需webView \n//隔壁几章易没图",
+      "path": "file_QiysOcqy_20250620114654.json"
+    },
+    {
+      "title": "书林文学",
+      "subtitle": "http://www.shu008.com",
+      "comment": "20250621\nby天天的鸟蛋蛋\n仅发现",
+      "path": "file_acvZNTMJ_20250621191712.json"
+    },
+    {
+      "title": "一页书",
+      "subtitle": "https://www.shacg.com",
+      "comment": "20250620by天天的鸟蛋蛋",
+      "path": "file_xsBOuaPz_20250620114558.json"
+    },
+    {
+      "title": "咔卡",
+      "subtitle": "https://jsonv8.2024eng2.top",
+      "comment": "2025/6/23\nby天天的鸟蛋蛋\n搜索标签\n ['漫画', '韩漫', '福利姬', '里番', '短剧', 'COS', '3D', '原神','福利姬2','国产动漫','日本动漫','欧美动漫','动漫电影','里番动漫','中文AV','传媒']\n使用说明\n默认搜索漫画\n如果需要标签：那就在关键词后面@标签\n例如：\n我的@漫画\n我的@韩漫\n以此类推\n回我后面没有@默认是搜索的漫画\n例如：\n我的\n返回漫画结果\n永久搜索标签请在源变量设置\n可以前往登录设置 ,为防止搜索冲突设置变量后，不再遵循@标签，请把变量改为0 ，@标签，重新启用，登录有恢复初始化可以点一下也可以。",
+      "path": "file_pfGOJSbn_20250623114524.json"
     }
   ],
   "collections": [
