@@ -1,0 +1,42 @@
+[
+  {
+    "bookSourceComment": "搜索模式两种精准搜索和模糊搜索@切换\n例如：\n我的@模糊\n我的@精准\n注：默认模糊搜索\n关键词+@+标签",
+    "bookSourceName": "colamanga",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.colamanga.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "lastUpdateTime": 1750761170456,
+    "loginUi": "[\n{\n        name: \"当前对应变量\",\n        type: \"button\",\n        action: \"get()\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },\n{\n        name: \"列表对应手动设置\",\n        type: \"button\",\n        action: \"showTagList()\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },\n{\n        name: \"🌟初始化\",\n        type: \"button\",\n        action: \"v(0)\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },{\n        name: \"设定永久标签(初始化恢复)\",\n        type: \"button\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },{\n        name: \"模糊搜索\",\n        type: \"button\",\n        action: \"v(1)\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 0.4\n        }\n    },{\n        name: \"精准搜索\",\n        type: \"button\",\n        action: \"v(2)\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 0.4\n        }\n    }\n    ]",
+    "loginUrl": "var tags =  ['模糊搜索', '精准搜索'];\nvar y = source.getVariable();\nif (!y || y === \"\") {\n    y = \"\";\n    source.setVariable(y);\n    java.toast(\"\\n首次使用\\n已初始化为空\\n---\\n默认为：@艾特标签搜索模式\");\n}\nvar v = function(value) {\n    var currentValue = source.getVariable();\n    var show = \"\\n设置成功！\\n当前变量：\";\n    var tagInfo = \"\";    \n    if (value === 0) {       \n        source.setVariable(\"\");\n        java.toast(\"\\n已初始化为空\\n---\\n默认为：@艾特标签搜索模式\");\n    } else if (value >= 1 && value <= tags.length) {\n        var numValue = String(value);\n        source.setVariable(numValue);\n        var tagText = tags[value - 1];\n        tagInfo = \"\\n对应标签：\" + tagText;\n        java.longToast(show + numValue + tagInfo);\n    } else {\n        var strValue = String(value);\n        source.setVariable(strValue);\n        java.longToast(show + strValue);\n    }\n};\nvar get = function() {\n    var current = source.getVariable();\n    var show = \"\\n当前变量：\";\n    var defaultMsg = \"\\n当前为空，默认为：@艾特标签搜索模式\";\n    var tagInfo = \"\";\n    if (current && !isNaN(current)) {\n        var num = parseInt(current);\n        if (num >= 1 && num <= tags.length) {\n            tagInfo = \"\\n对应标签：\" + tags[num - 1];\n        }\n    }    \n    if (!current || current === \"\") {\n        java.longToast(show + \"空\" + defaultMsg + tagInfo);\n    } else {\n        java.longToast(show + current + tagInfo);\n    }\n};\nvar showTagList = function() {\n    var list = \"可选标签列表：\";\n    for (var i = 0; i < tags.length; i++) {\n        list += \"\\n\" + (i + 1) + \". \" + tags[i];\n    }\n    java.longToast(list);\n};\n",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": ".fed-col-xs12:nth-child(2) > a@text",
+      "intro": ".fed-part-both@text",
+      "kind": "[property~=category|status|update_time]@content##\\s##,",
+      "lastChapter": "[property$=latest_chapter_name]@content",
+      "name": "[property$=book_name]@content"
+    },
+    "ruleContent": {},
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "li.-3@textNodes##【|】",
+      "bookList": ".fed-part-layout@.fed-deta-info",
+      "bookUrl": "h1@a@href",
+      "coverUrl": ".fed-list-pics@data-original",
+      "intro": "li.-1@text##简介",
+      "kind": "li@a@text&&li.2:4@textNodes",
+      "lastChapter": ".fed-list-remarks@text",
+      "name": "h1@a@text"
+    },
+    "ruleToc": {
+      "chapterList": "-.all_data_list@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "<js>var variable=source.getVariable()\njava.log(variable)\nif (variable == \"\") {\n  source.setVariable(\"0\")\n  }\nfunction processKey(inputKey) {\n    var modes = ['模糊', '精准'];\n      var pattern = new RegExp('(?:\\\\s+)?@(' + modes.join('|') + ')(?=\\\\s*$)', 'gi');\n    let lastMatch = null;\n    let cleanKey = inputKey;    \n    let match;\n    while ((match = pattern.exec(inputKey)) !== null) {\n        lastMatch = match[1]; \n    }\n    cleanKey = inputKey.replace(pattern, '').trim();\n    var typeIndex = lastMatch \n        ? modes.findIndex(mode => mode.toLowerCase() === lastMatch.toLowerCase()) \n        : 0;\n    return {\n        text: cleanKey,\n        type: typeIndex !== -1 ? typeIndex : 0 \n    };\n}\nvar result = processKey(key);\nvar key=result.text\n\nvar keyxmodev =variable\nif(keyxmodev == 0){\n\tvar keyxmode=result.type;\n\t}else{\n\t\tvar keyxmode = keyxmodev-1\n\t\t}\n\nif(keyxmode == 0){\n\tr=`/search?type=1&searchString=${key}&page=${page}`\n\t}else if(keyxmode == 1) {\n\t\tr=`/search?type=2&searchString=${key}&page=${page}`\n\t\t}\n\t\tr\n\t\t</js>",
+    "weight": 0
+  }
+]
