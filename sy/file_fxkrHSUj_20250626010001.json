@@ -1,0 +1,44 @@
+[
+  {
+    "bookSourceComment": "2025/6/26\nby天天的鸟蛋蛋",
+    "bookSourceName": "新新漫画",
+    "bookSourceType": 2,
+    "bookSourceUrl": "https://so.77mh.xyz",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "jsLib": "function i() {\n    var defaultUrl = \"https://so.77mh.xyz\";\n    var sourceObj = this.source;\n    try {\n        var variableData = sourceObj.getVariable() && JSON.parse(sourceObj.getVariable());\n        var targetUrl = variableData && variableData[0] && variableData[0].url;\n        var baseUrl = targetUrl || defaultUrl;\n        var fullUrl = /^https?:/.test(baseUrl) ? baseUrl : \"https://\" + baseUrl;\n        return fullUrl.replace(/\\/$/, \"\");\n    } catch (error) {\n        var fallbackUrl = /^https?:/.test(defaultUrl) ? defaultUrl : \"https://\" + defaultUrl;\n        return fallbackUrl.replace(/\\/$/, \"\");\n    }\n}\n\nfunction host() {\n    var defaultHost = \"https://picsh.77dm.top\";\n    var sourceObj = this.source;\n    try {\n        var variableData = sourceObj.getVariable() && JSON.parse(sourceObj.getVariable());\n        var targetHost = variableData && variableData[0] && variableData[0].host;\n        var baseHost = targetHost || defaultHost;\n        var fullHost = /^https?:/.test(baseHost) ? baseHost : \"https://\" + baseHost;\n        return fullHost.replace(/\\/$/, \"\");\n    } catch (error) {\n        var fallbackHost = /^https?:/.test(defaultHost) ? defaultHost : \"https://\" + defaultHost;\n        return fallbackHost.replace(/\\/$/, \"\");\n    }\n}",
+    "lastUpdateTime": 1750870797585,
+    "loginUi": "[{\n        name: \"漫画接口(正文)切换\",\n        type: \"button\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },\n  {\n  \t\"name\":\"漫画接口1\",\"type\":\"button\",\n  \t\"action\":\"sethost(1)\"\n  },\n  {\n  \t\"name\":\"漫画接口2\",\"type\":\"button\",\n  \t\"action\":\"sethost(2)\"\n  },\n  {\n  \t\"name\":\"漫画接口3\",\"type\":\"button\",\n  \t\"action\":\"sethost(3)\"\n  },{\n        name: \"搜索接口(切换)\",\n        type: \"button\",\n        \"style\": {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 1\n        }\n    },{\n  \t\"name\":\"搜索接口1\",\"type\":\"button\",\n  \t\"action\":\"seturl(1)\"\n  },\n  {\n  \t\"name\":\"搜索接口2\",\"type\":\"button\",\n  \t\"action\":\"seturl(2)\"\n  }\n]",
+    "loginUrl": "var hosts = [\n    \"https://picsh.77dm.top\",\n    \"https://hws.gdbyhtl.net\",\n    \"https://imgsh.dm365.top\"\n];\nvar urls=[\n\"https://so.77mh.xyz\",\n\"https://so.77mh.com\",\n\n];\n// 初始化检查函数\nfunction initConfig() {\n    var config = [];\n    try {\n        config = JSON.parse(source.getVariable());\n    } catch (e) {   }\n        if (!Array.isArray(config) || config.length === 0) {\n        config = [{ host: \"\", url: \"\" }];\n        source.setVariable(JSON.stringify(config));\n    }\n    return config;\n}\n\n// 设置host方法\nfunction sethost(index) {\n    var config = initConfig();\n    if (index >= 1 && index <= hosts.length) {\n        // 创建新配置对象，保留现有URL\n        var newConfig = [{\n            host: hosts[index - 1],\n            url: config[0] && config[0].url ? config[0].url : \"\"\n        }];\n        source.setVariable(JSON.stringify(newConfig));\n        java.longToast(\"设置成功，当前线路：\" + hosts[index - 1]);\n    } else {\n        java.toast(\"❌ 无效的线路索引\");\n    }\n}\n\n// 设置URL方法\nfunction seturl(index) {\n    var config = initConfig();\n    if (index >= 1 && index <= urls.length) {\n        // 创建新配置对象，保留现有host\n        var newConfig = [{\n            host: config[0] && config[0].host ? config[0].host : \"\",\n            url: urls[index - 1]\n        }];\n        source.setVariable(JSON.stringify(newConfig));\n        java.longToast(\"设置成功，当前搜索URL：\" + urls[index - 1]);\n    } else {\n        java.toast(\"❌ 无效的搜索URL索引\");\n    }\n}\n",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": ".author@a@text",
+      "coverUrl": ".coc_info@img@src",
+      "intro": ".intro@html",
+      "kind": ".update@textNodes&&.state@a@text",
+      "name": ".coc_info@h1@text"
+    },
+    "ruleContent": {
+      "content": "<js>\nvar eval_c=result.match(/eval\\(.*\\)/)[0]\neval(String(eval_c))\nvar host=host()\nvar imageList = msg.split('|');var imgTags = imageList.map(url => `<img src=\"${host}/h${img_s}/${url}\">`).join('\\n');imgTags;\n</js>"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author@b@text",
+      "bookList": ".list@a",
+      "bookUrl": "href",
+      "coverUrl": "img@src",
+      "intro": "{{@.info@textNodes}}",
+      "kind": ".uptime@b@text&&.subtitle@text",
+      "name": ".title@text"
+    },
+    "ruleToc": {
+      "chapterList": "-.chapLiList-cont@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "{{i()}}/m.php?k={{key}}&p={{page}}",
+    "weight": 0
+  }
+]
