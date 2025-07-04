@@ -151,6 +151,12 @@
       "path": "file_FXsimPVu_20250624083316.json"
     },
     {
+      "title": "新新漫画",
+      "subtitle": "https://so.77mh.xyz",
+      "comment": "2025/6/26\nby天天的鸟蛋蛋",
+      "path": "file_JISzpMoe_20250626015615.json"
+    },
+    {
       "title": "番(伪)茄",
       "subtitle": "https://m.zym888.com/",
       "comment": "2025/6/24\n源2025.1.10 by辞晨 \n2k小说改by天天的鸟蛋蛋 2025/6/24",
@@ -193,16 +199,28 @@
       "path": "file_acvZNTMJ_20250621191712.json"
     },
     {
-      "title": "一页书",
-      "subtitle": "https://www.shacg.com",
-      "comment": "20250620by天天的鸟蛋蛋",
-      "path": "file_xsBOuaPz_20250620114558.json"
+      "title": "colamanga",
+      "subtitle": "https://www.colamanga.com",
+      "comment": "搜索模式两种精准搜索和模糊搜索@切换\n例如：\n我的@模糊\n我的@精准\n注：默认模糊搜索\n关键词+@+标签",
+      "path": "file_ddNschSB_20250624183826.json"
+    },
+    {
+      "title": "pornhub",
+      "subtitle": "https://cn.pornhub.com",
+      "comment": "2025/6/\nby天天的鸟蛋蛋",
+      "path": "file_erZWQCkw_20250624165523.json"
     },
     {
       "title": "咔卡",
       "subtitle": "https://jsonv8.2024eng2.top",
       "comment": "2025/6/23\nby天天的鸟蛋蛋\n搜索标签\n ['漫画', '韩漫', '福利姬', '里番', '短剧', 'COS', '3D', '原神','福利姬2','国产动漫','日本动漫','欧美动漫','动漫电影','里番动漫','中文AV','传媒']\n使用说明\n默认搜索漫画\n如果需要标签：那就在关键词后面@标签\n例如：\n我的@漫画\n我的@韩漫\n以此类推\n回我后面没有@默认是搜索的漫画\n例如：\n我的\n返回漫画结果\n永久搜索标签请在源变量设置\n可以前往登录设置 ,为防止搜索冲突设置变量后，不再遵循@标签，请把变量改为0 ，@标签，重新启用，登录有恢复初始化可以点一下也可以。",
       "path": "file_pfGOJSbn_20250623114524.json"
+    },
+    {
+      "title": "一页书",
+      "subtitle": "https://www.shacg.com",
+      "comment": "20250620by天天的鸟蛋蛋",
+      "path": "file_xsBOuaPz_20250620114558.json"
     }
   ],
   "collections": [
