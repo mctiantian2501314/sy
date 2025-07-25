@@ -1,0 +1,43 @@
+[
+  {
+    "bookSourceComment": "（cf盾 需登录过盾）",
+    "bookSourceGroup": "🥓 日用",
+    "bookSourceName": "🌸半夏小说✈️",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.banxia.la/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 8.1.0; JKM-AL00b Build/HUAWEIJKM-AL00b; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044807 Mobile Safari/537.36\",\n  \"referer\":\"https://www.xbanxia.com\"\n}",
+    "lastUpdateTime": 1748288886597,
+    "loginUrl": "https://www.xbanxia.com",
+    "respondTime": 6280,
+    "ruleBookInfo": {
+      "author": "class.book-describe@a.0@text@js:java.t2s(result)",
+      "coverUrl": "class.book-img@img@data-original",
+      "intro": "class.describe-html@html",
+      "lastChapter": "class.book-describe@a.1@text",
+      "name": "class.book-describe@h1@text@js:java.t2s(result)"
+    },
+    "ruleContent": {
+      "content": "id.nr1@html@js:java.t2s(result)",
+      "replaceRegex": "##本站无弹.*"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.pop-intro@text@js:java.t2s(result)",
+      "bookList": "class.pop-book2",
+      "bookUrl": "a@href",
+      "coverUrl": "img@data-original",
+      "name": "class.pop-tit@text@js:java.t2s(result)"
+    },
+    "ruleToc": {
+      "chapterList": "class.book-list@li@a",
+      "chapterName": "text@js:java.t2s(result)",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "https://www.banxia.la/modules/article/search_t.php,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}",
+    "weight": 0
+  }
+]
