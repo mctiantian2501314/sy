@@ -1,0 +1,50 @@
+[
+  {
+    "bookSourceComment": "25/6/1\nby天天的鸟蛋蛋",
+    "bookSourceName": "奇奇小说网",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.477zw3.com",
+    "bookUrlPattern": "https://m.477zw3.com/html/\\d+/\\d+/",
+    "customOrder": 26,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "玄幻小说::/xuanhuan/\n修真小说::/xiuzhen/\n都市小说::/dushi/\n历史小说::/lishi/\n网游小说::/wangyou/\n科幻小说::/kehuan/\n言情小说::/yanqing/\n其他小说::/qita/\n完结小说::/quanben/",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; U; Android 13; zh-Hans-CN; PFJM10 Build/TP1A.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.4896.58 Quark/6.13.6.581 Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1748847615025,
+    "respondTime": 182607,
+    "ruleBookInfo": {
+      "author": ".block_txt2@p.2@text",
+      "coverUrl": "img@src",
+      "intro": ".intro_info@text",
+      "kind": ".block_txt2@p.3:4:5@text##.*：",
+      "lastChapter": ".block_txt2@p.-1@text##.*：",
+      "name": "h2@text"
+    },
+    "ruleContent": {
+      "content": "#nr1@textNodes",
+      "imageStyle": "0",
+      "nextContentUrl": "text.下一章@href",
+      "replaceRegex": "##奇奇小说.*com|奇奇小说更新最快.*com/|奇奇小説更新最快.*/ヽ。|\\(首发.*=0|あ奇奇小説.*请记住"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author@text",
+      "bookList": "<js>if(result.match(/Just a/)){\n\njava.startBrowserAwait(baseUrl,\"余凛验证\")\nresult=java.ajax(baseUrl);\n}\nresult\n</js>\n.bookbox:nth-child(n+1)",
+      "bookUrl": "a.0@href",
+      "coverUrl": "img@src",
+      "intro": ".intro_line@text",
+      "kind": "class.result-game-item-info-tag.1@tag.span.1@text",
+      "lastChapter": ".update > a@text",
+      "name": ".bookname@text"
+    },
+    "ruleToc": {
+      "chapterList": ".chapter@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "nextTocUrl": "option@value"
+    },
+    "searchUrl": "/search.php?keyword={{key}}&submit=",
+    "weight": 0
+  }
+]
