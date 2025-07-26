@@ -1,0 +1,46 @@
+[
+  {
+    "bookSourceComment": "// Error: 发现失效\n\n//无搜索",
+    "bookSourceGroup": "🔰 正版",
+    "bookSourceName": "🌿篱笆好文学",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.libahao.com",
+    "bookUrlPattern": "https:\\/\\/www.libahao.com\\/book\\/.*\\/",
+    "concurrentRate": "1/4000",
+    "customOrder": -99868,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"随机加载\",\"url\":\"/{{Math.floor(Math.random() * 10000) + 1}}\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},{\"title\":\"首页\",\"url\":\"/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"玄幻魔法\",\"url\":\"/xuanhuan/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"武侠修真\",\"url\":\"/xiuzhen/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"都市言情\",\"url\":\"/dushi/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历史军事\",\"url\":\"/lishi/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"游戏竞技\",\"url\":\"/wangyou/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻灵异\",\"url\":\"/kehuan/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"女生言情\",\"url\":\"/nvpin/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"其他小说\",\"url\":\"/qita/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}}]",
+    "lastUpdateTime": 1752863035048,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:author\"]@content",
+      "coverUrl": "img@src",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property~=las?test_chapter_name]@content",
+      "name": "[property=\"og:novel:book_name\"]@content",
+      "tocUrl": "[property=\"og:novel:read_url\"]@content"
+    },
+    "ruleContent": {
+      "content": "#chapterContent@p@html",
+      "nextContentUrl": ".page-header@text##.*\\d+\\/(\\d+).*##$1\n<js>\npage = Number(result[0]);\nlist = [];java.log(page);\nfor(var i = 2 ; i <= page;i++){\n\turl = baseUrl.replace(/\\.html/,\"_\"+i+\".html\");\n\tlist.push(url)\n\t}\nlist\n</js>"
+    },
+    "ruleExplore": {
+      "author": ".book-author@text",
+      "bookList": ".book-item",
+      "bookUrl": "href",
+      "coverUrl": "img@src",
+      "intro": ".book-description@text",
+      "name": ".book-title@text"
+    },
+    "ruleSearch": {},
+    "ruleToc": {
+      "chapterList": "class.chapter-list@tag.ul@tag.li",
+      "chapterName": "tag.a@text",
+      "chapterUrl": "tag.a@href"
+    },
+    "weight": 0
+  }
+]
