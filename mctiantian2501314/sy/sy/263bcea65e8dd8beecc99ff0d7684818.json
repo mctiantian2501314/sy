@@ -1,0 +1,63 @@
+[
+  {
+    "bookSourceComment": "By_聆听月与悦-2025.7.26\n正文接口: 小尘 支持",
+    "bookSourceGroup": "🍅番茄免费小说☃️,☃ 自用☃️",
+    "bookSourceName": "🍅番茄免费小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "番茄免费小说",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "jsLib": "let replaceCover = (u) => {\n    if (u.startsWith(\"https://\")) u = u.substring(8)\n    else u = u.substring(7)\n    let uArr = u.split(\"/\")\n    uArr[0] = \"https://p6-novel.byteimg.com/origin\"\n    let uArr2 = []\n    uArr.forEach((x) => {\n        if (!x.includes(\"?\") && !x.includes(\"~\")) uArr2.push(x)\n        else uArr2.push(x.split(\"~\")[0])\n    })\n    u = uArr2.join(\"/\")\n    return u\n}\n",
+    "lastUpdateTime": 1753540704005,
+    "loginUrl": "https://fanqienovel.com",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "$.author",
+      "coverUrl": "@js:replaceCover(java.getString(\"thumb_url\"))",
+      "init": "$.data[0]",
+      "intro": "&nbsp;&nbsp;\n📖 源名：{{$.original_book_name}}\n📖 别名：{{$.book_flight_alias_name}}\n✏️ 开坑：{{$.create_time##T|\\+.*## }}{{\"\\n\"+\"​\"}}\n🏷️ 分类：{{$.complete_category##/##,}}\n🏷️ 标签：{{$.tags}}\n👥 主角：{{$.roles##\\[|\\\"|\\]}}\n👁️ 在线：{{$.read_count}}人在读{{\"\\n\"+\"​\"}}\n🔖 状态：__status__{{\"\\n\"+\"​\"}}\n📜 简介：{{$.abstract}}{{\"\\n\"+\"​\"}}\n📍 {{$.copyright_info##，.*##。}}{{\"\\n\"+\"​\"}}\n@js:\nresult\n.replace(/.+：(人在读)?\\n/g,\"\")\n.replace('__status__', (java.getString('$.book_search_visible') == 'true' ? '正常' : (java.getString('$.tomato_book_status') == '3' ? '下架' : '小黑屋')))",
+      "kind": "{{$.category}},{{$.score}}分,连载{{$.creation_status}}完结,{{java.timeFormat(java.getString(\"last_chapter_update_time\")*1000)}}\n@js:\nresult\n.replace(/连载0完结/g,'完结')\n.replace(/连载1完结/g,'连载')\n.replace(/连载4完结/g,'已断更')\n.replace(/连载-1完结/g,'完结')\n.replace(/\\//g,'-')\n.replace(/\\s..:.*/g,'')",
+      "lastChapter": "{{$.last_chapter_title}} • {{java.timeFormat(java.getString(\"last_chapter_update_time\")*1000)}}",
+      "name": "$.book_name",
+      "tocUrl": "https://api.xcvts.cn/api/xiaoshuo/fanqie?mulu={{$.book_id}}",
+      "wordCount": "$.word_number"
+    },
+    "ruleContent": {
+      "content": "$.data.content",
+      "payAction": "java.toast(\"请登录账号并购买会员！\")\njava.startBrowserAwait(\"https://fanqienovel.com/\", \"登录\")",
+      "replaceRegex": "@js:\nresult.replace(/ /g, \"\\n\");"
+    },
+    "ruleExplore": {
+      "author": "$.author",
+      "bookUrl": "https://api5-normal-lf.fqnovel.com/reading/bookapi/multi-detail/v/?aid=1967&iid=1&version_code=999&book_id={{$.book_id}}",
+      "coverUrl": "$.thumb_url",
+      "intro": "$.abstract##\\n",
+      "kind": "{{$.category}}\n{{$.status}}\n{{$.source}}\n{{$.tags}}\n男生{{$.gender}}女生\n连载{{$.creation_status}}完结\n{{$.score}}分\n{{$..text}}\n{{$.sub_info}}\n##连载0|1完结|男生0|1女生|男生女生[\\s\\S]*\n@js:result\n.replace(\"男生2女生\",\"出版\")\n.replace(\"连载4完结\",\"断更\")\n.replace(\"连载-1完结\",\"未知\");",
+      "lastChapter": "{{$.last_chapter_title}} • {{$.last_update_time}}",
+      "name": "$.book_name",
+      "wordCount": "$.word_number"
+    },
+    "ruleSearch": {
+      "author": "$.author",
+      "bookList": "$.data.ret_data.*||$..book_info[*]",
+      "bookUrl": "https://api5-normal-lf.fqnovel.com/reading/bookapi/multi-detail/v/?aid=1967&iid=1&version_code=999&book_id={{$.book_id}}",
+      "checkKeyWord": "人生模拟：让女剑仙抱憾终身",
+      "coverUrl": "@js:replaceCover(java.getString(\"thumb_url\"))",
+      "intro": "$.abstract##\\n",
+      "kind": "男生{{$.gender}}女生\n连载{{$.creation_status}}完结\n{{$.score}}分\n{{$..text}}\n{{$.sub_info}}\n##连载0|1完结|男生0|1女生|男生女生[\\s\\S]*\n@js:result\n.replace(\"男生2女生\",\"出版\")\n.replace(\"连载4完结\",\"断更\")\n.replace(\"连载-1完结\",\"未知\");",
+      "lastChapter": "https://api5-normal-lf.fqnovel.com/reading/bookapi/multi-detail/v/?aid=1967&iid=1&version_code=999&book_id={{$.book_id}}\n<js>\nvar detail = JSON.parse(java.ajax(result));\nvar cheaper = detail.data[0].last_chapter_title;\nvar time = detail.data[0].last_chapter_update_time;\nvar info = cheaper + java.timeFormat(time*1000);\ninfo\n\t</js>",
+      "name": "$.book_name||$.title@put:{book_id: book_id}##<em>|</em>|《|》",
+      "wordCount": "$.word_number"
+    },
+    "ruleToc": {
+      "chapterList": "<js>\nvar jsonData = JSON.parse(result);\nvar chapters = jsonData.data;\n\nvar CheaperList = [];\nvar lastVolume = null;\n\nfunction detectVolumeChange(currentVolume, lastVolume) {\n    if (!lastVolume) return true;\n    var extractNumbers = function(volume) {\n    \t\n        var match = volume.match(/第([零一二三四五六七八九十百千]+)卷/) || \n                    volume.match(/第(\\d+)卷/);\n        return match ? match[1] : null;\n    };\n    \n    var currentNum = extractNumbers(currentVolume);\n    var lastNum = extractNumbers(lastVolume);\n    if (!currentNum || !lastNum) {\n    \t\n        return currentVolume !== lastVolume;\n    }\n    \n    return chineseToNumber(currentNum) > chineseToNumber(lastNum);\n}\nfunction chineseToNumber(chineseNum) {\n    var map = {\n        '零': 0, '一': 1, '二': 2, '三': 3, '四': 4,\n        '五': 5, '六': 6, '七': 7, '八': 8, '九': 9,\n        '十': 10, '百': 100, '千': 1000, '万': 10000\n    };\n    if (!isNaN(chineseNum)) return parseInt(chineseNum);\n    \n    var result = 0;\n    var temp = 0;\n    var lastUnit = 1;\n    \n    for (var i = 0; i < chineseNum.length; i++) {\n        var char = chineseNum[i];\n        if (map[char] >= 10) {\n            if (temp === 0) temp = 1;\n            result += temp * map[char];\n            temp = 0;\n            lastUnit = map[char];\n        } else {\n            temp = map[char];\n        }\n    }\n    return result + temp;\n}\n\nfunction convertChapterTitle(title) {\n    if (title.match(/^\\d{1,2}\\.\\s*/)) {\n        var num = parseInt(title.match(/^(\\d{1,2})\\./)[1]);\n        return \"第\" + numberToChinese(num) + \"章\" + title.replace(/^\\d{1,2}\\.\\s*/, \" \");\n    }\n    return title.replace(/第(\\d+)章/, function(match, num) {\n        return \"第\" + numberToChinese(parseInt(num)) + \"章\";\n    });\n}\nfunction numberToChinese(num) {\n    var chineseNums = [\"零\", \"一\", \"二\", \"三\", \"四\", \"五\", \"六\", \"七\", \"八\", \"九\"];\n    var units = [\"\", \"十\", \"百\", \"千\"];\n    \n    if (num === 0) return chineseNums[0];\n    if (num < 10) return chineseNums[num];\n    if (num === 10) return \"十\";\n    \n    var str = num.toString();\n    var result = \"\";\n    \n    for (var i = 0; i < str.length; i++) {\n        var digit = parseInt(str[i]);\n        var unitIndex = str.length - i - 1;\n        \n        if (digit === 0) {\n            if (i < str.length - 1 && parseInt(str[i + 1]) !== 0) {\n                result += chineseNums[0];\n            }\n            continue;\n        }\n       \n        if (i === 0 && digit === 1 && unitIndex === 1) {\n            result += units[unitIndex];\n            continue;\n        }\n        \n        result += chineseNums[digit] + units[unitIndex];\n    }\n    \n    return result;\n}\n\nfor (var i = 0; i < chapters.length; i++) {\n    var chapter = chapters[i];\n    var currentVolume = chapter.volume_name;\n   \n    if (detectVolumeChange(currentVolume, lastVolume)) {\n        CheaperList.push({\n            Cheaper_name: currentVolume,\n            isVolume: true\n        });\n        lastVolume = currentVolume;\n    }\n    \n    var convertedTitle = convertChapterTitle(chapter.title);\n    \n    CheaperList.push({\n        Cheaper_name: convertedTitle,\n        isVolume: false,\n        Cheaper_url: `https://api.xcvts.cn/api/xiaoshuo/fanqie?content=${chapter.item_id}`\n    });\n}\n\nif (CheaperList.length > 0 && !CheaperList[0].isVolume) {\n    CheaperList.unshift({\n        Cheaper_name: chapters[0].volume_name,\n        isVolume: true\n    });\n}\nresult = CheaperList;\n</js>",
+      "chapterName": "Cheaper_name",
+      "chapterUrl": "Cheaper_url",
+      "isVolume": "isVolume"
+    },
+    "searchUrl": "@js:\nfunction getUrl(key) {\n  let isNumber = /^\\d+$/.test(key);\n  if (isNumber) {\n    return `https://api5-normal-lf.fqnovel.com/reading/bookapi/multi-detail/v/?aid=1967&iid=1&version_code=999&book_id={{key}}`;\n  } else {\n    return `https://novel.snssdk.com/api/novel/channel/homepage/search/search/v1/?device_platform=android&parent_enterfrom=novel_channel_search.tab.&offset={{(page-1)*10}}&aid=1967&q={{key}}`;\n  }\n}\ngetUrl(key)",
+    "weight": 0
+  }
+]
