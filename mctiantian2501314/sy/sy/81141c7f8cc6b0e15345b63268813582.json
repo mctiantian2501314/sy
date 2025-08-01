@@ -1,0 +1,57 @@
+[
+  {
+    "bookSourceComment": "by不坏",
+    "bookSourceGroup": "测试",
+    "bookSourceName": "晨曦小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.chenxixsw.com",
+    "customOrder": -1,
+    "enabled": false,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"玄幻\",\"url\":\"/sort/1/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"武侠\",\"url\":\"/sort/2/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"都市\",\"url\":\"/sort/3/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历史\",\"url\":\"/sort/4/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"游戏\",\"url\":\"/sort/5/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻\",\"url\":\"/sort/6/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"青春\",\"url\":\"/sort/7/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"耽美\",\"url\":\"/sort/8/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"其他\",\"url\":\"/sort/9/{{page}}/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}}]",
+    "header": "",
+    "lastUpdateTime": 1754064371502,
+    "respondTime": 180426,
+    "ruleBookInfo": {
+      "author": "h2@a.1@text",
+      "intro": "id.bookintro@text",
+      "kind": "h2@a.0@text&&h2@span.1@text",
+      "lastChapter": ".book-info-last@a@text",
+      "name": "",
+      "tocUrl": "text.章节目录@href||text.目录@href",
+      "wordCount": "h2@span.0@text"
+    },
+    "ruleContent": {
+      "content": "id.chaptercontent@p!0:1:2@text",
+      "imageStyle": "",
+      "nextContentUrl": ".book-read-page@a.3@href",
+      "replaceRegex": "##最近转码严重.*",
+      "title": "h1@text##（\\d+.*）"
+    },
+    "ruleExplore": {
+      "bookList": "",
+      "bookUrl": "",
+      "name": ""
+    },
+    "ruleSearch": {
+      "author": "p.0@text",
+      "bookList": "class.book-list-1-info",
+      "bookUrl": "a@href",
+      "checkKeyWord": "",
+      "coverUrl": "",
+      "intro": "p.1@text",
+      "kind": "p.2@span@text",
+      "lastChapter": "",
+      "name": "h4@text"
+    },
+    "ruleToc": {
+      "chapterList": "class.am-list@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "nextTocUrl": "text.下一页@href"
+    },
+    "searchUrl": "https://m.chenxixsw.com{{cookie.removeCookie(source.key)}}/search/?searchkey={{key}}",
+    "weight": 0
+  }
+]
