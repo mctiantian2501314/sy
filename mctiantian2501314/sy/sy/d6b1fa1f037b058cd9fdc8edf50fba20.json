@@ -1,0 +1,91 @@
+[
+  {
+    "bookSourceComment": "2025.1.16by.◎辞晨◎",
+    "bookSourceGroup": "_辞晨",
+    "bookSourceName": "无限小说◎辞晨◎",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://m.wenxuesk.info/",
+    "customOrder": 4461,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "@js:\nsort=[];\npush=(title,url,type1,type2)=>sort.push({\n\t\ttitle: title,\n\t\turl: url,\n\t\tstyle: {\n\t\t\t\tlayout_flexGrow: type1,\n\t\t\t\tlayout_flexBasisPercent: type2\n\t\t\t}\n\t});\npush(\"全部🌊分类\",null,1,1)\npush(\"全本🌊小说\",`/over/{{key}}.html`,1,1)\n\tarList=[\t[\"玄幻小说\",\"xuanhuan\"],[\"武侠小说\",\"wuxia\"],[\"都市小说\",\"dushi\"],[\"历史小说\",\"lishi\"],[\"青春小说\",\"qc\"],[\"游戏小说\",\"youxi\"],[\"悬疑小说\",\"xy\"],[\"科幻小说\",\"kehuan\"],[\"言情小说\",\"yq\"],[\"其他小说\",\"qita\"]]\n\tarList.map(([tag,uri])=>{\n\t\turl=`/sort-${uri}/{{page}}.html`;\n\t\tpush(tag, url, 1, 0.25);\n\t\t});\n//java.log(JSON.stringify(sort))\nJSON.stringify(sort)",
+    "lastUpdateTime": 1737012551167,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:author\"]@content",
+      "coverUrl": "[property=\"og:image\"]@content",
+      "intro": "[property=\"og:description\"]@content##\\s",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property~=las?test_chapter_name]@content",
+      "name": "[property=\"og:novel:book_name\"]@content",
+      "tocUrl": "text.章节目录@href",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": ".content@p@html",
+      "nextContentUrl": "text.下一章@href",
+      "replaceRegex": "##.*第\\d+页\\/.*"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author@text",
+      "bookList": ".bookbox",
+      "bookUrl": "h4@a@href",
+      "coverUrl": "img@src",
+      "intro": ".intro_line@text##简介：",
+      "lastChapter": ".update@a@text",
+      "name": "h4@a@text"
+    },
+    "ruleToc": {
+      "chapterList": ".chapter@li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "/search/result.html?searchkey={{key}}&submit=",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "_细雨尘寰",
+    "bookSourceName": "无限小说网",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://m.wenxuesk.info/##细雨尘寰",
+    "customOrder": 8749,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 10) Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1732339557103,
+    "respondTime": 1245,
+    "ruleBookInfo": {
+      "author": ".block_txt2@p.4@a@text",
+      "coverUrl": ".block_img2@img@src",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": ".block_txt2@p.3@text##分类：",
+      "lastChapter": "{{@@.block_txt2@p.-1@a@text}}·{{@@.block_txt2@p.-2@text##更新：}}",
+      "name": ".block_txt2@h2@text",
+      "tocUrl": "text.章节目录@href"
+    },
+    "ruleContent": {
+      "content": ".content@p@html##本章未.*点击下一.*\\d+页\\/.*\\d+页",
+      "nextContentUrl": "text.下一章@href",
+      "title": ""
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author@text##作者：",
+      "bookList": ".bookbox",
+      "bookUrl": ".bookimg@a@href",
+      "checkKeyWord": "我的女儿我的家乡",
+      "coverUrl": ".bookimg@img@src",
+      "name": ".bookname@text"
+    },
+    "ruleToc": {
+      "chapterList": ".chapter@li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "http://m.wenxuesk.info/search/result.html?searchkey={{key}}&submit=",
+    "weight": 0
+  }
+]
