@@ -1,0 +1,45 @@
+[
+  {
+    "bookSourceComment": "2025.8.4  自写书源",
+    "bookSourceName": "超凡小说网",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.chaofks.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"◎ 类型 ◎\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},{\"title\":\"玄幻\",\"url\":\"https://www.chaofks.com/category/1/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"武侠\",\"url\":\"https://www.chaofks.com/category/2/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"都市\",\"url\":\"https://www.chaofks.com/category/3/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历史\",\"url\":\"https://www.chaofks.com/category/4/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻\",\"url\":\"https://www.chaofks.com/category/5/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"游戏\",\"url\":\"https://www.chaofks.com/category/6/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"其他\",\"url\":\"https://www.chaofks.com/category/7/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"女生\",\"url\":\"https://www.chaofks.com/category/8/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"言情\",\"url\":\"https://www.chaofks.com/category/9/1/{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"◎ 排行 ◎\",\"url\":\"\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":1}},{\"title\":\"总排行\",\"url\":\"https://www.chaofks.com/rank/allvisit/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"月排行\",\"url\":\"https://www.chaofks.com/rank/monthvisit/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"周排行\",\"url\":\"https://www.chaofks.com/rank/weekvisit/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"日排行\",\"url\":\"https://www.chaofks.com/rank/dayvisit/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"总收藏\",\"url\":\"https://www.chaofks.com/rank/goodnum/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"总推荐\",\"url\":\"https://www.chaofks.com/rank/allvote/\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}}]",
+    "lastUpdateTime": 1754263543862,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "#info@p.0@a@text",
+      "intro": "#intro@html",
+      "kind": ".hidden-xs.0:2@text##最后更新：",
+      "lastChapter": ".hidden-xs.1@a@title",
+      "name": "h1@text",
+      "tocUrl": "text.章节目录@href"
+    },
+    "ruleContent": {
+      "content": "#booktxt@p@html",
+      "nextContentUrl": "text.下一页@href##$##,{\"webView\": true}",
+      "replaceRegex": "##<strong>\\d+<\\/strong>"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".btm@a@title",
+      "bookList": "#hotcontent@.item@dl",
+      "bookUrl": "a.0@href",
+      "intro": "dd@html",
+      "kind": ".blue@text",
+      "name": "dt@a@title"
+    },
+    "ruleToc": {
+      "chapterList": "#list@dl@a:has(dd)",
+      "chapterName": "text",
+      "chapterUrl": "href##$##,{\"webView\": true}",
+      "nextTocUrl": "text.下一页@href"
+    },
+    "searchUrl": "/search.html?searchkey={{key}}",
+    "weight": 0
+  }
+]
