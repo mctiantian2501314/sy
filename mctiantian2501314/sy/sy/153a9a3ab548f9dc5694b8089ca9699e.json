@@ -1,0 +1,55 @@
+[
+  {
+    "bookSourceComment": "重构搜索\n服务器 搜索by天天的蛋蛋",
+    "bookSourceName": "四库书屋",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://www.4ksw.com",
+    "bookUrlPattern": "http://www.4ksw.com/\\d+/\\d+/",
+    "customOrder": 4,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"总排行榜\",\"url\":\"/book/allvisit-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"周排行榜\",\"url\":\"/book/weekvisit-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"月排行榜\",\"url\":\"/book/monthvisit-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"总推荐榜\",\"url\":\"/book/allvote-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"周推荐榜\",\"url\":\"/book/weekvote-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"月推荐榜\",\"url\":\"/book/monthvote-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"最近更新\",\"url\":\"/book/lastupdate-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"玄幻魔法\",\"url\":\"/list/1-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"仙侠修真\",\"url\":\"/list/2-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"都市言情\",\"url\":\"/list/3-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"历史军事\",\"url\":\"/list/4-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"网游动漫\",\"url\":\"/list/5-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"科幻小说\",\"url\":\"/list/6-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"恐怖灵异\",\"url\":\"/list/7-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}},{\"title\":\"其他类型\",\"url\":\"/list/8-{{page}}.html\",\"style\":{\"layout_flexGrow\":1,\"layout_flexBasisPercent\":0.25}}]",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76\"}",
+    "lastUpdateTime": 1753000712564,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:author\"]@content",
+      "coverUrl": "[property=\"og:image\"]@content",
+      "intro": "[property$=description]@content&&[name=\"description\"]content",
+      "kind": "[property~=(category|status|update_time)]@content",
+      "lastChapter": "[property=\"og:novel:latest_chapter_name\"]@content##（.*订阅.*）",
+      "name": "[property$=title]@content"
+    },
+    "ruleContent": {
+      "content": ".content-body@html",
+      "imageStyle": "FULL"
+    },
+    "ruleExplore": {
+      "author": ".book_author@text||a.-1@text",
+      "bookList": "\n.col-lg-6||.article li",
+      "bookUrl": ".book-title a@href||a@href",
+      "coverUrl": "a.0@href<js>\nvar id = result.match(/(\\d+)\\/(\\d+)/)[2];\nvar iid = parseInt(id/1000);\n'/files/article/image/'+iid+'/'+id+'/'+id+'s.jpg';\n</js>",
+      "intro": ".book-intro-index@textNodes",
+      "kind": "textNodes##(.*-\\d{2})\\d+(.*)##$1,$2###",
+      "lastChapter": ".lastchapter@text||a.1@text##（.*求.*）",
+      "name": ".media-heading@text||a.0@text"
+    },
+    "ruleSearch": {
+      "author": "author",
+      "bookList": "$.data.li[*]",
+      "bookUrl": "url",
+      "coverUrl": "cover_url",
+      "intro": "intro",
+      "kind": "category",
+      "name": "title"
+    },
+    "ruleToc": {
+      "chapterList": "class.list-group.1@li",
+      "chapterName": "a@text##T|T|Ｔ## (图片文字)<js>##【.*】|加更规则.*|上架感言.*|（.*求.*）</js>",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "http://api.ttdndd.me/4ksw/search?query={{key}}&page={{page}}",
+    "weight": 0
+  }
+]
