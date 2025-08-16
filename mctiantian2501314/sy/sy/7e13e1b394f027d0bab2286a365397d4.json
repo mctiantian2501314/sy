@@ -1,0 +1,46 @@
+[
+  {
+    "bookSourceComment": "//小玩具勿动\nhtml_b=src.match(/html_b=\"(.+)\"/)[1];\n//java.log(html_b)\nvar 解析=java.base64Decode(html_b,\"utf-8\")\n//备用 var 解析_1=decodeURIComponent(解析)\n//java.log(解析)\n解析;",
+    "bookSourceName": "AU文学",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://shu1111.com/AU文学",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "lastUpdateTime": 1755322585365,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "author",
+      "coverUrl": "/img_io_read/{{$.url_cover}}",
+      "init": "<js>\neval(String(source.bookSourceComment))\nvar book=解析.match(/book=(\\{.*\\});/)[1]\ndata=JSON.parse(book)\nJSON.stringify(data);\n</js>",
+      "intro": "intro",
+      "kind": "{{$.type_name}},{{$.time_update}}",
+      "lastChapter": "last_chapter_name",
+      "name": "book_name",
+      "tocUrl": "/show_jsload_book_info/{{$.book_yun_path}}"
+    },
+    "ruleContent": {
+      "content": "<js>\neval(String(source.bookSourceComment))\n</js>\n.entry-content@html##正在阅读.*|当前章节.*章"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".author:nth-child(2)@text",
+      "bookList": "<js>\neval(String(source.bookSourceComment))\n</js>\n#book_list@ul@li",
+      "bookUrl": "a.0@href",
+      "coverUrl": "img@src",
+      "intro": "p:nth-child(6)@text",
+      "kind": ".author:nth-child(5)@text##.*：",
+      "lastChapter": ".author:nth-child(4)@text##.*：",
+      "name": "h3@text",
+      "wordCount": ".author:nth-child(3)@text"
+    },
+    "ruleToc": {
+      "chapterList": "<js>html_b=src.match(/dstr=\"(.+)\"/)[1];\n//java.log(html_b)\nvar 解析=java.base64Decode(html_b,\"utf-8\")\nvar 解析=decodeURIComponent(解析)\nvar data=JSON.parse(解析)\nJSON.stringify(data)\n</js>\n$.chapter_list[*]",
+      "chapterName": "$.name",
+      "chapterUrl": "{{book.bookUrl}}{{$.file_name}}"
+    },
+    "searchUrl": "https://shu1111.com/AU文学/searchword?q={{key}}",
+    "weight": 0
+  }
+]
