@@ -1,0 +1,58 @@
+[
+  {
+    "bookSourceComment": "// Error: 搜索目录失效\n\n//2025.5.30 by.◎辞晨◎",
+    "bookSourceGroup": "官方-6-7-8月单品,搜索目录失效",
+    "bookSourceName": "免费h小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.langrenxiaoshuo.com/",
+    "customOrder": 20,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "@js:\nsort=[];\npush=(title,url,type1,type2)=>sort.push({\n\t\ttitle: title,\n\t\turl: url,\n\t\tstyle: {\n\t\t\t\tlayout_flexGrow: type1,\n\t\t\t\tlayout_flexBasisPercent: type2\n\t\t\t}\n\t});\n\tD=org.jsoup.Jsoup.parse(java.ajax(\"https://www.langrenxiaoshuo.com/\"))\n\t//java.log(D);\n\tpush(\"全部🏷分类\",null,1,1)\t\nD.select(\".m-nav li\").forEach(n=>{\n\tli=n.select(\"a\")\n\tlet url=(`${li.attr(\"href\")}`).replace(/\\.html/,'_17689_{{page}}.html');\n\t\tpush(li.text(),url,1,0.25)\n\t\t})\n\t//java.log(JSON.stringify(sort))\nJSON.stringify(sort)",
+    "lastUpdateTime": 1755403808416,
+    "respondTime": 185982,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:zuozhe\"]@content",
+      "coverUrl": "[property=\"og:image\"]@content",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property~=las?test_chapter_name]@content",
+      "name": "[property=\"og:novel:book_name\"]@content",
+      "wordCount": "[property$=status]@content"
+    },
+    "ruleContent": {
+      "content": "#content@html",
+      "nextContentUrl": "<js>\n//java.log(page=String(java.getString('.chapterPages@a.-1@html')))\npage=String(java.getString('.chapterPages@a.-1@html')).match(/\\/(\\d+)\\/(\\d+)\\_(\\d+)\\.html/)\nif(page){\n\tlet burl=source.key;\n\tpageSum=parseInt(page[3])\n\tresult=Array.from({length:pageSum-1},\n(_,i)=>`${burl}${page[1]}/${page[2]}_${i+2}.html`)\n result;\n\t}else{null}\n</js>",
+      "replaceRegex": "##.*www.*|.*script.*|.*本章未完.*|\\【\\d{1}】.*|.*第.*章.*|"
+    },
+    "ruleExplore": {
+      "author": "span@text",
+      "bookList": ".item",
+      "bookUrl": "a.1@href",
+      "coverUrl": "img@src",
+      "kind": "font.0@text",
+      "lastChapter": "font.1@text",
+      "name": "a.1@text"
+    },
+    "ruleSearch": {
+      "author": ".s4 ,b@text",
+      "bookList": ".txt-list-row5 li+ li||.txt-list li!0",
+      "bookUrl": "a.0@href",
+      "checkKeyWord": "女配",
+      "coverUrl": "@js:'/images/jipin-default.jpg'",
+      "intro": "class.xs-show@text!0",
+      "kind": "span.0:-1@text##\\[|\\]",
+      "lastChapter": "a.-1@text",
+      "name": ".s2@text"
+    },
+    "ruleToc": {
+      "chapterList": ".chapters@.col-6||.chapters@.chapter",
+      "chapterName": "tag.a@text",
+      "chapterUrl": "tag.a@href",
+      "nextTocUrl": "text.下页@href"
+    },
+    "searchUrl": "/s.php?\naction=search&type=top&wd={{java.encodeURI(key,\"gbk\")}}&uid=&totalresult=681&pageno={{page}}",
+    "weight": 0
+  }
+]
