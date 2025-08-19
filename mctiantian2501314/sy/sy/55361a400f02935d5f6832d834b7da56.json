@@ -1,0 +1,47 @@
+[
+  {
+    "bookSourceComment": "// Error: org.mozilla.javascript.EcmaError: TypeError: 无法读取 null 的属性 “1” (<Unknown source>#5) in <Unknown source> at line number 5",
+    "bookSourceGroup": "js失效",
+    "bookSourceName": "📻 275听书",
+    "bookSourceType": 1,
+    "bookSourceUrl": "https://m.ting275.com/",
+    "customOrder": 353,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "玄幻奇幻::/category/6/2/{{page}}.html\n都市言情::/category/7/2/{{page}}.html\n宫斗女频::/category/8/2/{{page}}.html\n官场商战::/category/9/2/{{page}}.html\n武侠仙侠::/category/10/2/{{page}}.html\n刑侦推理::/category/11/2/{{page}}.html\n探险科幻::/category/12/2/{{page}}.html\n重生穿越::/category/13/2/{{page}}.html\n恐怖惊悚::/category/14/2/{{page}}.html\n文学历史::/category/15/2/{{page}}.html\n两性情感::/category/49/2/{{page}}.html\n网游竞技::/category/50/2/{{page}}.html\n相声评书::/category/51/2/{{page}}.html",
+    "header": "{\r\n    \"User-Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1\"\r\n}",
+    "lastUpdateTime": 1755572811582,
+    "loginCheckJs": "cookie.removeCookie(source.getKey())\nresult",
+    "respondTime": 185740,
+    "ruleBookInfo": {
+      "author": ".extra.2:1@text##\\n##/",
+      "coverUrl": "img@src",
+      "intro": ".book-intro@text##(^|[。！？]+[”」）】]?)##$1<br>",
+      "kind": ".extra .text.0:3:4@text",
+      "lastChapter": ".num@text",
+      "name": "h2@text"
+    },
+    "ruleContent": {
+      "content": "$.src\n@js:\nvar v = result.split(\"*\"),\r\n \t\t\t\tstr = '';\nfor (var i = 0, n = v.length; i < n; i++) {\r\n \t\t\t\tstr += String.fromCharCode(v[i]);\r\n \t\t\t}\nstr"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": ".broadcaster@textNodes##\\d.*",
+      "bookList": "<js>\nif(result.search(/trk_jschal_js/)>=0){\ncookie.removeCookie(source.bookSourceUrl)\nvar x=java.get(\"url\")\njava.webView(null,x,null);\nresult=java.ajax(x);\n  if(result.search(/trk_jschal_js/)>=0){\n\t  java.startBrowserAwait(x,\"验证\");\n\t  result=java.ajax(x);\n\t  }\n\t}\n\tresult\n</js>.list-wrapper a",
+      "bookUrl": "a.0@href",
+      "coverUrl": "img@src",
+      "intro": ".desc@text",
+      "kind": ".status@text&&span.3@text##\\|",
+      "name": "h2@textNodes",
+      "wordCount": "{{@@.broadcaster@textNodes##.*\\s}}℃"
+    },
+    "ruleToc": {
+      "chapterList": ".book-list a",
+      "chapterName": "text",
+      "chapterUrl": "href\n@js:\nid=result.match(/(\\d+)\\/(\\d*)/);\n\nt=Math.round(new Date()/1000);\n\nurl=\"https://m.ting275.com/pc/index/getchapterurl/bookId/\"+id[1]+\"/chapterId/\"+id[2]+\"/timestamp/\"+t+\".html\";"
+    },
+    "searchUrl": "@js:\nurl = \"https://m.ting275.com/pc/index/search.html\";\njava.put('url', String(url + \"?\" +\"keyword=\"+key+\"&page=\"+page))",
+    "weight": 0
+  }
+]
