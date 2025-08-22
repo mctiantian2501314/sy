@@ -1,0 +1,38 @@
+[
+  {
+    "bookSourceComment": "by天天的鸟蛋蛋 2025/8/22\n仅发现",
+    "bookSourceName": "妥妥小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.totto.net",
+    "bookUrlPattern": "https://www.totto.net/.*/.*/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "原著小说::/yuanzhu/\n官场小说::/guanchang/\n推理小说::/tuili/\n文学小说::/wenxue/\n武侠小说::/wuxia/\n科幻小说::/kehuan/\n网络小说::/wangluo/\n言情小说::/yanqing/",
+    "lastUpdateTime": 1755835274305,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "p.0@text",
+      "init": ".col-lg-9",
+      "intro": "p.2@text",
+      "name": "h1@text"
+    },
+    "ruleContent": {
+      "content": ".article-post@html"
+    },
+    "ruleExplore": {
+      "author": "span@text",
+      "bookList": "ol@li",
+      "bookUrl": "a@href",
+      "name": "a@text"
+    },
+    "ruleSearch": {},
+    "ruleToc": {
+      "chapterList": "#list-ol@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "weight": 0
+  }
+]
