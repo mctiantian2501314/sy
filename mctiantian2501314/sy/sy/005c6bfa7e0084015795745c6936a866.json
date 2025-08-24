@@ -1,0 +1,29 @@
+[
+  {
+    "bookSourceName": "爱书网",
+    "bookSourceType": 3,
+    "bookSourceUrl": "https://www.asw777.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 13; PFJM10 Build/TP1A.220905.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/138.0.7204.179 Mobile Safari/537.36\",\n  \"Connection\": \"keep-alive\",\n  \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\",\n  \"accept-language\": \"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6,zh-HK;q=0.5\"\n}",
+    "lastUpdateTime": 1756041663360,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "downloadUrls": ".elsetext.0@a.1:3:6:5@href"
+    },
+    "ruleContent": {},
+    "ruleExplore": {},
+    "ruleSearch": {
+      "bookList": "tr:nth-child(n+1)",
+      "bookUrl": "a@href",
+      "kind": "font@text&&td:nth-child(4)@text",
+      "name": "a@text",
+      "wordCount": "td:nth-child(2)@text"
+    },
+    "ruleToc": {},
+    "searchUrl": "/search.php?kw={{key}}&page={{page}}",
+    "weight": 0
+  }
+]
