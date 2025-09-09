@@ -1,0 +1,47 @@
+[
+  {
+    "bookSourceName": "🤽🏼‍♂️ 逼事阁😎（已失联）",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://m.youdian5.com/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": "[{\"title\":\"最近更新\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"全部\",\"url\":\"http://m.youdian5.com/yd/xclass/0/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"玄幻奇幻\",\"url\":\"http://m.youdian5.com/yd/xclass/1/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"武侠仙侠\",\"url\":\"http://m.youdian5.com/yd/xclass/2/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"都市言情\",\"url\":\"http://m.youdian5.com/yd/xclass/3/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"历史军事\",\"url\":\"http://m.youdian5.com/yd/xclass/4/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"科幻灵异\",\"url\":\"http://m.youdian5.com/yd/xclass/5/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},\n{\"title\":\"网游动漫\",\"url\":\"http://m.youdian5.com/yd/xclass/6/{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.4,\"layout_flexGrow\":1}},{\"title\":\"排行榜\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"周榜\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"全部\",\"url\":\"http://m.youdian5.com/yd/ph/week_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"玄幻奇幻\",\"url\":\"http://m.youdian5.com/yd/ph/week1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"武侠仙侠\",\"url\":\"http://m.youdian5.com/yd/ph/week2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"都市言情\",\"url\":\"http://m.youdian5.com/yd/ph/week3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"历史军事\",\"url\":\"http://m.youdian5.com/yd/ph/week4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"科幻灵异\",\"url\":\"http://m.youdian5.com/yd/ph/week5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"网游动漫\",\"url\":\"http://m.youdian5.com/yd/ph/week6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"月榜\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"全部\",\"url\":\"http://m.youdian5.com/yd/ph/month_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"玄幻奇幻\",\"url\":\"http://m.youdian5.com/yd/ph/month1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"武侠仙侠\",\"url\":\"http://m.youdian5.com/yd/ph/month2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"都市言情\",\"url\":\"http://m.youdian5.com/yd/ph/month3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"历史军事\",\"url\":\"http://m.youdian5.com//yd/ph/month4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"科幻灵异\",\"url\":\"http://m.youdian5.com/yd/ph/month5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"网游动漫\",\"url\":\"http://m.youdian5.com/yd/ph/month6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},{\"title\":\"总榜\",\"url\":\"\",\"style\":{\"layout_flexBasisPercent\":1,\"layout_flexGrow\":1}},{\"title\":\"全部\",\"url\":\"http://m.youdian5.com/yd/ph/all_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"玄幻奇幻\",\"url\":\"http://m.youdian5.com/yd/ph/all1_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"武侠仙侠\",\"url\":\"http://m.youdian5.com/yd/ph/all2_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"都市言情\",\"url\":\"http://m.youdian5.com/yd/ph/all3_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"历史军事\",\"url\":\"http://m.youdian5.com/yd/ph/all4_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"科幻灵异\",\"url\":\"http://m.youdian5.com/yd/ph/all5_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}},\n{\"title\":\"网游动漫\",\"url\":\"http://m.youdian5.com/yd/ph/all6_{{page}}.html\",\"style\":{\"layout_flexBasisPercent\":0.25,\"layout_flexGrow\":1}}]",
+    "lastUpdateTime": 1754754071980,
+    "respondTime": 5797,
+    "ruleBookInfo": {
+      "author": "class.author@text##作者：",
+      "coverUrl": "class.synopsisArea_detail@tag.img@src",
+      "intro": "class.review@text",
+      "kind": "class.sort@text##类别：",
+      "lastChapter": "class.directoryArea@tag.a.0@text",
+      "name": "class.title@text",
+      "tocUrl": "tag.h2@tag.a@href"
+    },
+    "ruleContent": {
+      "content": "id.chaptercontent@html##在线.*",
+      "imageStyle": "full",
+      "nextContentUrl": "text.下一页@href"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.author.0@text##.*\\|",
+      "bookList": "class.recommend@class.hot_sale",
+      "bookUrl": "tag.a@href",
+      "coverUrl": "tag.a.0@href##.*/(\\d+)_(\\d+)/##http://www.boshisw.com/files/article/image/$1/$2/$2s.jpg",
+      "intro": "class.review@text##各位书友.*|简介：",
+      "kind": "class.author.0@text##作者.*|小说.*|\\|",
+      "lastChapter": "class.author.1@text##.*更新：",
+      "name": "class.title@text"
+    },
+    "ruleToc": {
+      "chapterList": "id.chapterlist@tag.p!0",
+      "chapterName": "tag.a@text",
+      "chapterUrl": "tag.a@href",
+      "nextTocUrl": "text.尾页@href##.*\\/.*_.*\\/p(\\d+)\\.html##$1\n@js:\nres = JSON.parse(result)\nlist = [];\nfor (var i = 2; i <= res; i++) {\n\tlist.push(baseUrl.replace(/p\\.html/,\"p\" + i + \".html\")); \n}\nlist;"
+    },
+    "searchUrl": "http://m.youdian5.com//s.php,{\n\"charset\":\"\",\n\"method\":\"POST\",\n\"body\":\"t=1&keyword={{key}}&submit=搜索\"\n}",
+    "weight": 0
+  }
+]
