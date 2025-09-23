@@ -1,0 +1,38 @@
+[
+  {
+    "bookSourceName": "爱侣小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.ailvxs.com/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "lastUpdateTime": 1758636999485,
+    "loginUrl": "https://m.ailvxs.com/",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "tocUrl": "text.进入目录@href"
+    },
+    "ruleContent": {
+      "content": "<js>\nurl=\"https:\"+result.match(/initTxt\\(\"([^\"]+)\",\"[^\"]+\"\\)/)[1];\nr=String(java.ajax(url).match(/_txt_call\\(([\\s\\S]+\\})\\)/)[1]);\nvar r = eval('(' + r + ')');\n\t\t\t\tif(r.content!=null){\t\t\t\t\n      var e = r.replace;\n\t\t\t\tfor (var n in e) {\n\t\t\t\t\tvar i = new RegExp(e[n], \"ig\");\n\t\t\t\t\tr.content = r.content.replace(i, n)\n\t\t\t\t}\n\t\t\t\tresult=r.content\n\t\t\t\t\t}else{result=\"章节加载失败，或者容正在手打中，请【收藏本站】稍访问或者联系管理员更新~\"}\n</js>",
+      "imageDecode": "@js:ava.base64Decode()"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "span.1@text",
+      "bookList": ".search-card",
+      "bookUrl": "a@href",
+      "intro": ".sc-content@text",
+      "lastChapter": ".sc-time@text",
+      "name": "span.0@text"
+    },
+    "ruleToc": {
+      "chapterList": "-.chapter-list@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "nextTocUrl": "text.下页@href"
+    },
+    "searchUrl": "/search/,{\n  \"body\": \"keyword={{key}}&submit=\",\n  \"method\": \"POST\"\n}",
+    "weight": 0
+  }
+]
