@@ -1,0 +1,23 @@
+[
+  {
+    "concurrentRate": "0",
+    "contentType": "",
+    "enabledCookieJar": false,
+    "header": "",
+    "id": 8881617431710811,
+    "lastUpdateTime": 1754231182336,
+    "loginCheckJs": "",
+    "loginUi": "",
+    "loginUrl": "",
+    "name": " 常用、喜欢的tts，前加空格可排前",
+    "url": "https://s4w-2019.zhiyin.sogou.com/tts?language_code=zh-cmn-Hans-CN&speaker=yani-pro&text={{(java.encodeURI(speakText))}} &speaking_rate=1&volume=1"
+  },
+  {
+    "concurrentRate": "0",
+    "enabledCookieJar": false,
+    "id": 1616128390712,
+    "lastUpdateTime": 1728028583446,
+    "name": "🐬博文🐬",
+    "url": "http://tts.baidu.com/text2audio,{\n    \"method\": \"POST\",\n    \"body\": \"tex={{java.encodeURI(java.encodeURI(speakText))}}&spd={{(speakSpeed + 5) / 10 + 4}}&per=4106&cuid=baidu_speech_demo&idx=1&cod=2&lan=zh&ctp=1&pdt=301&vol=5&pit=5&_res_tag_=audio\"\n}"
+  }
+]
