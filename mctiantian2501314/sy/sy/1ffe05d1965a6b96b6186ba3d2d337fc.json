@@ -1,0 +1,39 @@
+[
+  {
+    "bookSourceComment": "// Error: 发现失效, 搜索失效",
+    "bookSourceGroup": "发现失效,小说 书源,搜索失效",
+    "bookSourceName": "书农文学",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://www.shunong.com/",
+    "customOrder": 343,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "最新更新::new\n热门小说::hot\n下载排行::down\n推荐小说::isgood\n言情小说::t/yanqing\n穿越小说::chuanyue\n玄幻小说::xuanhuan\n武侠小说::wuxia\n恐怖小说::kongbu\n悬疑小说::xuanyi\n科幻小说::kehuan\n历史小说::lishi\n网游小说::wangyou\n职场小说::zhichang\n文学作品::wenxue\n盗墓小说::daomu\n侦探小说::zhentan\n灵异小说::lingyi\n奇幻小说::qihuan\n架空小说::jiakong\n校园小说::xiaoyuan\n都市言情::dushiyq\n现代言情::xiandaiyq\n古代言情::gudaiyq\n台湾言情::taiwanyq\n推理小说::tuili\n惊悚小说::jingsong\n青春小说::qingchun\n军事小说::junshi\n宫斗小说::gongdou\n官场小说::guanchang\n商战小说::shangzhan\n搞笑小说::gaoxiao\n三国小说::sanguo\n修仙小说::xiuxian\n女尊女强::nvzun\n虐心小说::nuexin\n都市小说::dushi\n武侠书籍::wx\n言情书籍::yq\n仙侠修真::xh\n校园书籍::xy\n历史军事::ls\n现代文学::xd\n恐怖书籍::kb\n国外文学::gw",
+    "lastUpdateTime": 1758773281611,
+    "respondTime": 180750,
+    "ruleBookInfo": {
+      "coverUrl": "class.pic@tag.img@src",
+      "intro": "class.book_info@tag.p@text"
+    },
+    "ruleContent": {
+      "content": "id.htmlContent@tag.p@text##.*在线阅读，希望您喜欢，|如果觉得.*"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.s@tag.a@text||class.common.2@text",
+      "bookList": "class.bk@tag.li||class.clearfix.1@tag.li||class.listbox@tag.li",
+      "bookUrl": "class.bk@tag.a@href||tag.a.0@href",
+      "coverUrl": "tag.img.0@src",
+      "kind": "class.common.3@text",
+      "name": "tag.font@text||class.common.1@text||tag.a.0@text##在线阅读|《|》"
+    },
+    "ruleToc": {
+      "chapterList": "class.book_list@tag.a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/search.html,{\n  \"method\": \"POST\",\n  \"body\": \"show=title&tempid=1&keyboard={{key}}\"\n}",
+    "weight": 0
+  }
+]
