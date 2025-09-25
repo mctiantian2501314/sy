@@ -1,0 +1,58 @@
+[
+  {
+    "bookSourceComment": "// Error: 发现失效, 搜索失效",
+    "bookSourceGroup": "发现失效,搜索失效",
+    "bookSourceName": "言情999🎃",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.yanqing999.com#🎃",
+    "bookUrlPattern": "https://www.qingquan.ren/book/\\d+/",
+    "customOrder": 1097,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "@js:\nsort = [];\npush = (title, url, basis1, basis2) => sort.push({\n    title: title,\n    url: url,\n    style: {\n        layout_flexGrow: basis1,\n        layout_flexBasisPercent: basis2\n    }\n});\nList =[ \n[\"全部分类\",\"sort/\"],\n[\"玄幻奇幻\",\"sort/1/\"],\n[\"武侠修真\",\"sort/2/\"],\n[\"都市言情\",\"sort/3/\"],\n[\"网游动漫\",\"sort/4/\"],\n[\"科幻小说\",\"sort/5/\"],\n[\"恐怖灵异\",\"sort/6/\"],\n[\"其他类型\",\"sort/7/\"],\n\n[\"🔥完结小说🔥\",\"title\"],　　\n[\"全部分类\",\"quanben/sort/\"],\n[\"玄幻奇幻\",\"quanben/sort/1/\"],\n[\"武侠修真\",\"quanben/sort/2/\"],\n[\"都市言情\",\"quanben/sort/3/\"],\n[\"网游动漫\",\"quanben/sort/4/\"],\n[\"科幻小说\",\"quanben/sort/5/\"],\n[\"恐怖灵异\",\"quanben/sort/6/\"],\n[\"其他类型\",\"quanben/sort/7/\"]\n];\npush(\"🔥分类小说🔥\",null,1,1);\nList.map(([tag, url]) => {\n    url = `${baseUrl}/${url}{{page}}/`;\n    if (tag.startsWith(\"🔥\")) {\n        push(tag, url, 1, 1);\n    } else {\n        push(tag, url, 1, 0.33);\n    }\n});\nJSON.stringify(sort);",
+    "lastUpdateTime": 1758788519733,
+    "respondTime": 181344,
+    "ruleBookInfo": {
+      "author": "author",
+      "coverUrl": "cover",
+      "init": "@js:\n(function(){\n    let doc = org.jsoup.Jsoup.parse(result)\n    let og = (selector) => doc.select('[property=\"og:' + selector + '\"]').attr('content')\n    return {\n        name: og('novel:book_name'),\n        author: og('novel:author'),\n        kind: og('novel:category')\n        +'•'+og('novel:status')\n      +'•'+String(og('novel:update_time')),\n        lastest: og('novel:lastest_chapter_name'),\n        cover: og('image'),\n        intro: og('description'),\n        url:og('novel:read_url')\n    }\n})()",
+      "intro": "intro",
+      "kind": "kind",
+      "lastChapter": "lastest",
+      "name": "name"
+    },
+    "ruleContent": {
+      "content": "article@html",
+      "nextContentUrl": "#next_url@href"
+    },
+    "ruleExplore": {
+      "author": "i@text",
+      "bookList": ".flex@li",
+      "bookUrl": "a.0@href",
+      "coverUrl": ".lazy@src",
+      "intro": "p.0@text",
+      "kind": "span.0@text##/\\s*",
+      "lastChapter": "em.1@text",
+      "name": "h2@text",
+      "wordCount": "em.0@text"
+    },
+    "ruleSearch": {
+      "author": "p.0@textNodes",
+      "bookList": ".searchresult",
+      "bookUrl": "a.1@href",
+      "coverUrl": ".lazy@src",
+      "intro": "p.1@text",
+      "kind": "p.0@text##{{book.author}}",
+      "lastChapter": "p.2@a@text",
+      "name": "a.1@text"
+    },
+    "ruleToc": {
+      "chapterList": "#ul_all_chapters@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "https://m.yanqing999.com/s.php,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}",
+    "weight": 0
+  }
+]
