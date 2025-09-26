@@ -1,0 +1,64 @@
+[
+  {
+    "bookSourceComment": "2025.1.10 Buding\n添加 明月照大江 大佬的代理代码，挂t无发现",
+    "bookSourceGroup": "常用清水",
+    "bookSourceName": "笔阁趣文📱代理",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.xbgqw.com",
+    "customOrder": 13,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "玄幻魔法::https://m.xbgqw.com/class_visit_1/{{page}}.html\n仙侠修真::https://m.xbgqw.com/class_visit_2/{{page}}.html\n都市言情::https://m.xbgqw.com/class_visit_3/{{page}}.html\n言情女生::https://m.xbgqw.com/class_visit_8/{{page}}.html\n恐怖灵异::https://m.xbgqw.com/class_visit_7/{{page}}.html",
+    "header": "@js:\n(()=>{\n    ua = \"Mozilla/5.0 (Linux; Android 10; SK) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36\";\n    ref = source.key + \"/\";\n    cookie = cache.get('croxy ck') ? cache.get('croxy ck') : \"\";\n    \n    var headers = {\n        \"User-Agent\": ua,\n        \"cookie\": cookie\n    }; \n    return JSON.stringify(headers);\n})()",
+    "jsLib": "let su = \"https://m.xbgqw.com\";\n\nfunction cpo(nu) {\n  const { java, source } = this;\n  return java.base64Encode(nu || source.getKey(), 3);\n}\n\nfunction getServerId() {\n  return String(Math.floor(Math.random() * 100) + 100);\n}\n\nfunction getHost() {\n  const { java, cache } = this;\n  let maxRetries = 10;\n  let url = 'https://143.244.204.138/requests?fso=';\n\n  for (let i = 0; i < maxRetries; i++) {\n    try {\n      let sid = getServerId();\n      java.log('测试服务器：' + sid);\n      let body = 'url=' + encodeURIComponent(url) + '&proxyServerId=' + sid + '&frontOrigin=https%3A%2F%2Fwww.croxy.network';\n      let response = java.post(url, body, {});\n\n      let locationHeader = response.header('location');\n      if (locationHeader) {\n        let u = java.toURL(locationHeader);\n        let host = 'https://' + u.host;\n        let cook = '__cpc=' + u.searchParams.get('s');\n        let time = Date.now().toString();\n\n        cache.put('croxy ck', cook);\n        cache.put('croxy time', time, 7200);\n        cache.put('croxy host', host);\n        return host;\n      }\n    } catch (e) {\n      if (i === maxRetries - 1) {\n        throw new Error('达到最大重试次数，无法获取服务器信息');\n      }\n    }\n  }\n\n  throw new Error('接口获取错误');\n}\n\nfunction ipCheck() {\n  const { java, cache } = this;\n\n  let time = cache.get('croxy time');\n  let ntime = Date.now();\n  let timeDiff = time ? ntime - parseInt(time, 10) : Infinity;\n\n  if (!cache.get('croxy host') || !time || timeDiff > 7200000) {\n    Packages.java.lang.Thread.sleep(Math.floor(Math.random() * 800));\n\n    if (!cache.get('cxylock')) {\n      try {\n        cache.put('cxylock', 1, 60);\n        this.getHost();\n      } catch (error) {\n        java.log('未知错误');\n      } finally {\n        cache.delete('cxylock');\n      }\n    }\n\n    while (cache.get('cxylock')) {\n      Packages.java.lang.Thread.sleep(100);\n    }\n  }\n  return String(cache.get('croxy host'));\n}",
+    "lastUpdateTime": 1753172812404,
+    "loginCheckJs": "if (result.body().includes('Request failed')) {\n  bh = cache.get('croxy host');\n  java.log(bh)\n  host = ipCheck();\n  \n  if (key) {\n    let url = java.ruleUrl;\n    url = url.replace(bh, host);\n    result = java.connect(url);\n    }\n} result;",
+    "loginUi": "[\n  {\n    \"name\": \"清除缓存\",\n    \"type\": \"button\",\n    \"action\": \"clear()\"\n  },\n  {\n  \t \"name\": \"初始化发现列表\",\n  \t \"type\": \"button\",\n  \t \"action\": \"start()\"\n  \t }\n]",
+    "loginUrl": "function clear() {\n\tcache.delete(\"croxy host\");\n\tcache.delete(\"croxy time\");\n\tcache.delete(\"croxy ck\");\n\tcache.delete(\"cxylock\");\n\tjava.toast(\"缓存已清空\")\n}\n\nfunction start () {\n\tjava.toast(\"正在初始化...请稍等\")\n\tipCheck();\n\tjava.toast(\"初始化成功\")\n}",
+    "respondTime": 180359,
+    "ruleBookInfo": {
+      "author": "@get:{a}",
+      "coverUrl": "@get:{i}",
+      "init": "@put:{n:\"[property$=book_name]@content\",\na:\"[property$=author]@content\",\nt:\"[property~=category|status]@content\",\nl:\"[property$=latest_chapter_name]@content\",\ni:\"[property$=image]@content\",\no:\"[property$=description]@content\",\ng:\"[property$=update_time]@content\",\nz:\".info@p.-2@text##.*：\"\n}",
+      "intro": "@get:{o}",
+      "kind": "@get:{t}",
+      "lastChapter": "@get:{l}◎@get:{g}",
+      "name": "@get:{n}",
+      "tocUrl": "{{baseUrl}}##.*\\/book\\/(\\d+)\\.html##https://www.xbgqw.com/0_$1/###",
+      "wordCount": "@get:{z}"
+    },
+    "ruleContent": {
+      "content": "#content@html",
+      "nextContentUrl": "text.下一页@href"
+    },
+    "ruleExplore": {
+      "author": "p.1@text##(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)$##$1###",
+      "bookList": ".pictext",
+      "bookUrl": "a@href",
+      "coverUrl": ".left_img@img@src",
+      "intro": "p2@text",
+      "kind": "p.1@text##(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)$##$2,$4###",
+      "name": "p.0@text",
+      "wordCount": "p.1@text##(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)\\s*\\|\\s*(.*?)$##$3###"
+    },
+    "ruleSearch": {
+      "author": ".info@p.0@text##\\[作者\\]：",
+      "bookList": ".partlist-info@dl",
+      "bookUrl": "a@href\n@js:result.replace(su, source.getVariable()).replace(/$/, `?__cpo=${cpo()}`)",
+      "checkKeyWord": "穿书女配",
+      "coverUrl": "img@src",
+      "kind": "p.1@text##\\[类别\\]：",
+      "lastChapter": "p.3@text##\\[最新\\]：",
+      "name": "dt@text",
+      "wordCount": "p.2@text##\\[字数\\]："
+    },
+    "ruleToc": {
+      "chapterList": "//div[@id='list']/dl/dt[2]/following-sibling::dd/a",
+      "chapterName": "text",
+      "chapterUrl": "href@js:result.replace(su, source.getVariable()).replace(/$/, `?__cpo=${cpo()}`)"
+    },
+    "searchUrl": "{{ipCheck()}}/search.php?searchkey={{key}}&__cpo={{cpo()}}",
+    "weight": 0
+  }
+]
